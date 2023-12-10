@@ -9,10 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationStack {
-            
+        NavigationView {
+            VStack(alignment: .leading) {
+                Text("Neuron").font(Font.custom("Maven Pro", size: 36).weight(.semibold))
+                    .padding(16)
+                List {
+                    Text("blah")
+                    Text("bha")
+                }
+            }
+            .padding(16)
         }
-        .navigationTitle("Neuron")
     }
 }
 

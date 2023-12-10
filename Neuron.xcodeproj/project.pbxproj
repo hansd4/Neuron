@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB720BB22B262C420047026B /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB720BB12B262C420047026B /* LaunchScreenView.swift */; };
 		BBC2BEED2B25485A00FC3F8C /* NeuronApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2BEEC2B25485A00FC3F8C /* NeuronApp.swift */; };
 		BBC2BEEF2B25485A00FC3F8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2BEEE2B25485A00FC3F8C /* ContentView.swift */; };
 		BBC2BEF12B25485B00FC3F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC2BEF02B25485B00FC3F8C /* Assets.xcassets */; };
 		BBC2BEF42B25485B00FC3F8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC2BEF32B25485B00FC3F8C /* Preview Assets.xcassets */; };
+		BBC2BEFD2B25879000FC3F8C /* MavenPro-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBC2BEFC2B25879000FC3F8C /* MavenPro-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB720BB12B262C420047026B /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		BBC2BEE92B25485A00FC3F8C /* Neuron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neuron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC2BEEC2B25485A00FC3F8C /* NeuronApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuronApp.swift; sourceTree = "<group>"; };
 		BBC2BEEE2B25485A00FC3F8C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BBC2BEF02B25485B00FC3F8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBC2BEF32B25485B00FC3F8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BBC2BEFC2B25879000FC3F8C /* MavenPro-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		BBC2BF002B25899A00FC3F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB720BB32B2630BA0047026B /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BBC2BEF02B25485B00FC3F8C /* Assets.xcassets */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		BBC2BEE02B25485A00FC3F8C = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +64,13 @@
 		BBC2BEEB2B25485A00FC3F8C /* Neuron */ = {
 			isa = PBXGroup;
 			children = (
+				BBC2BF002B25899A00FC3F8C /* Info.plist */,
+				BB720BB32B2630BA0047026B /* Other */,
+				BBC2BEFF2B2587DC00FC3F8C /* Fonts */,
+				BBC2BEF22B25485B00FC3F8C /* Preview Content */,
 				BBC2BEEC2B25485A00FC3F8C /* NeuronApp.swift */,
 				BBC2BEEE2B25485A00FC3F8C /* ContentView.swift */,
-				BBC2BEF02B25485B00FC3F8C /* Assets.xcassets */,
-				BBC2BEF22B25485B00FC3F8C /* Preview Content */,
+				BB720BB12B262C420047026B /* LaunchScreenView.swift */,
 			);
 			path = Neuron;
 			sourceTree = "<group>";
@@ -65,6 +81,14 @@
 				BBC2BEF32B25485B00FC3F8C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BBC2BEFF2B2587DC00FC3F8C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BBC2BEFC2B25879000FC3F8C /* MavenPro-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,7 +119,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					BBC2BEE82B25485A00FC3F8C = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -126,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBC2BEF42B25485B00FC3F8C /* Preview Assets.xcassets in Resources */,
+				BBC2BEFD2B25879000FC3F8C /* MavenPro-VariableFont_wght.ttf in Resources */,
 				BBC2BEF12B25485B00FC3F8C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +164,7 @@
 			files = (
 				BBC2BEEF2B25485A00FC3F8C /* ContentView.swift in Sources */,
 				BBC2BEED2B25485A00FC3F8C /* NeuronApp.swift in Sources */,
+				BB720BB22B262C420047026B /* LaunchScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +207,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -195,7 +222,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -241,6 +268,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -249,7 +277,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -270,9 +298,10 @@
 				DEVELOPMENT_TEAM = K29598SF6P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Neuron/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -299,9 +328,10 @@
 				DEVELOPMENT_TEAM = K29598SF6P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Neuron/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
