@@ -11,7 +11,7 @@
 		<key>UIColorName</key>
 		<string>appDarkBlue</string>
 		<key>UIImageName</key>
-		<string>appIcon</string>
+		<string>LaunchScreen</string>
 		<key>UILaunchScreen</key>
 		<dict/>
 	</dict>
