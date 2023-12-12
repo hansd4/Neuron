@@ -15,13 +15,11 @@ struct EmailView: View {
             .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
         
-        NTextField()
-        Section("Enter a secure password") {
-            SecureField("Password", text: $viewModel.password)
-        }
+        NSecureField(title: "Enter a secure password", placeholder: "Password", text: $viewModel.password)
     }
 }
 
 #Preview {
     EmailView()
+        .environmentObject(RegisterViewModel())
 }

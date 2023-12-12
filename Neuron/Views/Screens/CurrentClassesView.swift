@@ -11,7 +11,15 @@ struct CurrentClassesView: View {
     @EnvironmentObject var viewModel: RegisterViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NTextField(title: "Search for your current classes", placeholder: "AP Calculus AB", text: $viewModel.searchQuery)
+        
+        ForEach(Classes.CLASSES.sorted(), id: \.key) { key, value in
+            Section(header: Text(key)) {
+                ForEach(value, id: \.self) { course in
+                    
+                }
+            }
+        }
     }
 }
 

@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct NTextCaption: View {
+    let content: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(content)
+            .font(Font.custom("Maven Pro", size: 12).weight(.thin))
+            .opacity(0.5)
+            .padding(.vertical)
     }
 }
 
 #Preview {
-    NTextCaption()
+    NTextCaption(content: "This is content. Yes. Yippee.")
 }

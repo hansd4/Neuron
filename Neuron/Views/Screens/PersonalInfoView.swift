@@ -11,18 +11,15 @@ struct PersonalInfoView: View {
     @EnvironmentObject var viewModel: RegisterViewModel
     
     var body: some View {
-        Section("Enter your full name") {
-            TextField("Name", text: $viewModel.name)
-                .autocorrectionDisabled()
-        }
+        NTextField(title: "Enter your full name", placeholder: "Name", text: $viewModel.name)
+            .autocorrectionDisabled()
         
-        Section("Enter your OSIS number") {
-            TextField("OSIS", value: $viewModel.OSIS, format: .number)
-                .keyboardType(.numberPad)
-        }
+        NTextField(title: "Enter your OSIS number", placeholder: "OSIS", text: $viewModel.OSIS)
+            .keyboardType(.numberPad)
     }
 }
 
 #Preview {
     PersonalInfoView()
+        .environmentObject(RegisterViewModel())
 }
