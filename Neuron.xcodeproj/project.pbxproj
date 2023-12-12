@@ -38,7 +38,6 @@
 		BB49B3F52B281A9400077999 /* NPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3F42B281A9400077999 /* NPhotoPicker.swift */; };
 		BB49B3F82B28216600077999 /* NTextCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3F72B28216600077999 /* NTextCaption.swift */; };
 		BB6F45512B2888DB008D0CAC /* CourseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45502B2888DB008D0CAC /* CourseCategory.swift */; };
-		BB6F45532B28B6F9008D0CAC /* Neuron.gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BB6F45522B28B6F9008D0CAC /* Neuron.gitignore */; };
 		BBC2BEED2B25485A00FC3F8C /* NeuronApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2BEEC2B25485A00FC3F8C /* NeuronApp.swift */; };
 		BBC2BEEF2B25485A00FC3F8C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2BEEE2B25485A00FC3F8C /* MainView.swift */; };
 		BBC2BEF12B25485B00FC3F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC2BEF02B25485B00FC3F8C /* Assets.xcassets */; };
@@ -76,7 +75,6 @@
 		BB49B3F42B281A9400077999 /* NPhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPhotoPicker.swift; sourceTree = "<group>"; };
 		BB49B3F72B28216600077999 /* NTextCaption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTextCaption.swift; sourceTree = "<group>"; };
 		BB6F45502B2888DB008D0CAC /* CourseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCategory.swift; sourceTree = "<group>"; };
-		BB6F45522B28B6F9008D0CAC /* Neuron.gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = Neuron.gitignore; sourceTree = "<group>"; };
 		BBC2BEE92B25485A00FC3F8C /* Neuron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neuron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC2BEEC2B25485A00FC3F8C /* NeuronApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuronApp.swift; sourceTree = "<group>"; };
 		BBC2BEEE2B25485A00FC3F8C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				BB0603802B264CEA0095C864 /* ViewModels */,
 				BB06037F2B264CE30095C864 /* Views */,
 				BBC2BEF22B25485B00FC3F8C /* Preview Content */,
-				BB6F45522B28B6F9008D0CAC /* Neuron.gitignore */,
 			);
 			path = Neuron;
 			sourceTree = "<group>";
@@ -294,7 +291,6 @@
 				BB0603472B2649C30095C864 /* GoogleService-Info.plist in Resources */,
 				BBC2BEFD2B25879000FC3F8C /* MavenPro-VariableFont_wght.ttf in Resources */,
 				BBC2BEF12B25485B00FC3F8C /* Assets.xcassets in Resources */,
-				BB6F45532B28B6F9008D0CAC /* Neuron.gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

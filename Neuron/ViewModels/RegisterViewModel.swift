@@ -31,7 +31,7 @@ class RegisterViewModel: ObservableObject {
     }
     @Published var pfpImage: Image?
     
-    @Published var searchQuery: String
+    @Published var searchQuery = ""
     
     init() {}
     

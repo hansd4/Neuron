@@ -13,11 +13,11 @@ struct CurrentClassesView: View {
     var body: some View {
         NTextField(title: "Search for your current classes", placeholder: "AP Calculus AB", text: $viewModel.searchQuery)
         
-        ForEach(Classes.CLASSES.sorted(by: $0.key < $1.key), id: \.key) { key, value in
-            Section(header: Text(key)) {
-                ForEach(value, id: \.self) { course in
-                    
-                }
+        ForEach(CourseCategory.allCategories) { category in
+            Text(category.name)
+            ForEach(category.courses, id: \.self) { course in
+                Text(course)
+                    .padding(.leading)
             }
         }
     }
@@ -25,4 +25,5 @@ struct CurrentClassesView: View {
 
 #Preview {
     CurrentClassesView()
+        .environmentObject(RegisterViewModel())
 }
