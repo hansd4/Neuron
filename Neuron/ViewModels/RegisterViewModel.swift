@@ -18,7 +18,11 @@ import PhotosUI
     @Published var pfp = UIImage(systemName: "person.circle.fill")
     @Published var OSIS = ""
     @Published var currentClasses = [String]()
-    @Published var tutorClasses = [String:[String:Double]]()
+    @Published var tutorClasses = [String:[String:Double]]() {
+        didSet {
+            print(String(data: try! JSONSerialization.data(withJSONObject: tutorClasses, options: .prettyPrinted), encoding: .utf8)!)
+        }
+    }
     
     @Published var activeScreen = 0
     
@@ -39,14 +43,9 @@ import PhotosUI
     init() {}
     
     func register() {
-        for key in tutorClasses.keys {
-            for pref in tutorClasses[key]! {
-                // print("\(key) : \(tutorClasses[key]?[pref])")
-            }
-        }
-        
-        Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
+            Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
             guard let userID = result?.user.uid else {
+                print("Error signing up: \(error)")
                 return
             }
             
