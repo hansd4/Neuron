@@ -15,6 +15,7 @@ struct MainView: View {
             accountView
         } else {
             LoginView()
+                .onAppear(perform: Classes.sendToFirebase)
         }
     }
     

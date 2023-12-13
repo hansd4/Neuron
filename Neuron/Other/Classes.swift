@@ -12,12 +12,13 @@ import FirebaseFirestore
 struct Classes {
     static let CLASSES = [
         "Biology": [
-            "Regents Living Environment",
+            "Living Environment",
             "AP Environmental Science",
             "AP Psychology",
             "AP Biology",
-            "Anatomy & Physiology",
-            "Genetics"
+            "Anatomy",
+            "Genetics",
+            "PLTW Environmental Sustainability"
         ],
         "Chemistry": [
             "Regents Chemistry",
@@ -25,7 +26,42 @@ struct Classes {
             "Organic Chemistry",
             "Modern Instrumental Chemical Analysis",
             "Quantitative Analysis",
-            "Introduction to Chemical Engineering"
+            "Introduction to Chemical Engineering",
+            "Forensics"
+        ],
+        "Computer Science and Engineering": [
+            "PLTW Digital Electronics",
+            "AP Computer Science Principles",
+            "AP Computer Science Principles Extended",
+            "AP Computer Science A",
+            "Fundamentals of IT Infrastructure",
+            "Big Data",
+            "Cyber Security",
+            "Web Development",
+            "Statics",
+            "Strength of Materials",
+            "Green Building Construction",
+            "Digital Systems Design",
+            "PLTW Engineering Design & Development"
+        ],
+        "English": [
+            "English 9",
+            "English 10",
+            "English 11",
+            "Science Fiction & Fantasy Literature",
+            "AP Capstone Seminar",
+            "AP Capstone Research",
+            "AP English Language & Composition",
+            "AP English Literature & Composition",
+            "Life, Love & Death",
+            "Creative Writing",
+            "Drama",
+            "Journalism",
+            "Yearbook",
+            "Film & Literature",
+            "Mystery, Horror & the Supernatural",
+            "Science Fiction & Fantasy",
+            "The Survey"
         ],
         "Physics": [
             "Regents Physics",
@@ -41,89 +77,59 @@ struct Classes {
             "Geometry",
             "Algebra II",
             "Precalculus",
+            "Calculus",
             "AP Statistics",
             "AP Calculus AB",
             "AP Calculus BC",
             "Multivariable Calculus",
             "Linear Algebra",
-            "Computational Modeling",
-            "Advanced Euclidean Geometry",
-            "Combinatorics",
             "Math Research",
-            "Freshman Math Team",
-            "JV Math Team",
-            "Varsity Math Team"
         ],
-        "Project Lead The Way": [
-            "Aerospace Engineering",
-            "Computer Integrated Manufacturing",
-            "Principles of Engineering",
-            "Digital Electronics",
-            "Civil Engineering & Architecture"
-        ],
-        "Computer Science": [
-            "AP Computer Science Principles",
-            "AP Computer Science A",
-            "Web Development",
-            "Oracle I & II",
-            "Oracle III & IV",
-        ],
-        "Engineering": [
-            "Structural Design / Statics",
-            "Green Building Construction",
-            "Digital Systems Design",
-            "Mechatronics",
-            "Robotics Engineering"
-        ],
-        "The Arts": [
-            "PLTW Design & Drafting for Production",
-            "Autocad",
-            "Architectural Drawing I & II",
-            "Introduction to Fabrication",
-            "Advanced Digital Modeling",
-            "Product Design",
-            "Adobe Visual Design & Print",
-            "Adobe Digital Video",
-            "MAYA Digital Animation",
-            "Stageworks: Set Design",
-            "Stageworks: Sound Systems",
-            "Stageworks: Lighting Design",
-            "Intermediate Band",
-            "Advanced Band",
-            "Jazz Band",
-            "Concert Band",
+        "Music": [
+            "AP Music Theory",
             "Basic Strings",
-            "String Orchestra",
+            "Beginning Musicianship and Chorus",
+            "Collaborative Piano/Choral Accompaniment",
+            "Concert Band",
+            "Concert Choir",
             "Intermediate Orchestra",
+            "Jazz Band",
+            "Junior Band",
             "Orchestra",
-            "Intermediate Chorus",
-            "Girls Chorus",
-            "Mixed Chorus",
-            "Chamber Chorus"
+            "String Orchestra",
+            "Symphonic Band",
+            "Treble Choir",
+            "Tech Chorale"
         ],
-        "English Language Arts": [
-            "English 9",
-            "English 10",
-            "English 11",
-            "Life, Love & Death",
-            "Gothic Literature",
-            "Short Stories",
-            "Science Fiction & Fantasy Literature",
-            "AP English Capstone Seminar",
-            "AP English Capstone Research",
-            "AP English Language & Composition",
-            "AP English Literature",
-            "Creative Writing",
-            "Drama",
-            "Journalism",
-            "Yearbook"
+        "World Languages": [
+            "German I",
+            "German II",
+            "German III",
+            "Italian I",
+            "Italian II",
+            "Italian III",
+            "AP Italian Language and Culture",
+            "French I",
+            "French II",
+            "French III",
+            "AP French Language and Culture",
+            "Chinese I",
+            "Chinese II",
+            "Chinese III",
+            "AP Chinese Language and Culture",
+            "Spanish I",
+            "Spanish II",
+            "Spanish III",
+            "Spanish IV",
+            "AP Spanish Language and Culture",
+            "AP Spanish Literature and Culture"
         ],
         "Social Studies": [
             "Pre-AP World History",
             "Regents Global History",
             "Regents United States History",
-            "Regents United States Government",
-            "Regents Economics",
+            "Participation in Government",
+            "Economics",
             "AP Human Geography",
             "AP World History",
             "AP European History",
@@ -134,49 +140,72 @@ struct Classes {
             "AP Microeconomics",
             "Sociology",
             "Cultural Anthropology",
-            "Physical Anthropology",
+            "Physical Anthropology"
+        ],
+        "Visual Arts": [
+            "Adobe Digital Video Design",
+            "Adobe Visual Design",
+            "Architectural Drawing",
+            "Digital Animation",
+            "PLTW Civil Engineering & Architecture",
+            "PLTW Design & Drafting for Production"
+        ],
+        "Aerospace": [
+            "PLTW Principles of Engineering",
+            "Flight School",
+            "PLTW Aerospace Engineering",
+            "PLTW Computer Integrated Manufacturing"
+        ],
+        "Architecture": [
+            "Architectural Design/Modeling",
+            "Autocad Certification",
+            "Building Materials & Fabrication"
+        ],
+        "Civil Engineering": [
+            "American Concrete Institute Certification",
+            "Land Surveying Certification",
+            "Autocad with Certiport Certification"
+        ],
+        "Finance": [
+            "Principles of Accounting",
+            "Finance & Investments",
+            "Introduction to Business Law"
+        ],
+        "Industrial Design": [
+            "Fundamentals of Product Design",
+            "Methods of Fabrication",
+            "Advanced Modeling",
+            "Inventor Certification"
+        ],
+        "Law & Society": [
             "Criminal Law",
+            "Constitutional Law",
             "Criminal Procedure",
             "Civil Law",
-            "Constitutional Law",
-            "Legal Ethics"
+            "Forensic Criminology"
         ],
-        "World Languages": [
-            "Italian I",
-            "Italian II",
-            "Italian III",
-            "AP Italian",
-            "French I",
-            "French II",
-            "French III",
-            "AP French Language",
-            "Mandarin I",
-            "Mandarin II",
-            "Mandarin III",
-            "AP Mandarin",
-            "Spanish I",
-            "Spanish II",
-            "Spanish III",
-            "AP Spanish Language"
+        "LIU PharmD": [
+            "Pharmacy Organic Chemistry and Seminar"
         ],
-        "Health & Physical Education": [
-            "9th Grade Physical Education",
-            "10th Grade Physical Education",
-            "11th Grade Physical Education",
-            "Fencing",
-            "Yoga",
-            "Weight Training",
-            "Beginner Swim",
-            "Advanced Swim: Lifeguard Cert.",
-            "Independent PE (Non-PSAL Sports)",
-            "Judo",
-            "Capoeira",
-            "Health"
+        "Applied Mathematics": [
+            "Graph Theory",
+            "Number Theory",
+            "Mathematical Computing"
+        ],
+        "Mechatronics & Robotics": [
+            "Robotics Engineering",
+            "Mechatronics with LabVIEW"
+        ],
+        "Media": [
+            "Studio Art",
+            "AP 2D Art and Design"
+        ],
+        "Social Science Research": [
+            "Social Science Research"
         ],
         "Other": [
-            "Weston Scholars Research I & II",
-            "Weston Scholars Research III & IV",
-            "Weston Scholars Reasearch: Capstone"
+            "Health",
+            "Student Leadership"
         ]
     ]
     
