@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 extension Encodable {
     func asDictionary() -> [String: Any] {
@@ -31,6 +32,26 @@ extension Decodable {
         } catch {
             print("Error decoding JSON into \(Self.self): \(error.localizedDescription)")
             return nil
+        }
+    }
+}
+
+public extension View {
+    func onFirstAppear(perform action: @escaping () -> ()) -> some View {
+        modifier(FirstAppear(action: action))
+    }
+}
+
+private struct FirstAppear: ViewModifier {
+    let action: () -> ()
+    
+    @State private var hasAppeared = false
+    
+    func body(content: Content) -> some View {
+        content.onAppear {
+            guard !hasAppeared else { return }
+            hasAppeared = true
+            action()
         }
     }
 }

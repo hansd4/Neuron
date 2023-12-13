@@ -14,7 +14,7 @@ struct Course: Codable, Comparable, Identifiable {
     
     private enum CodingKeys: String, CodingKey {
             case name, id
-        }
+    }
     
     static func < (lhs: Course, rhs: Course) -> Bool {
         lhs.name < rhs.name

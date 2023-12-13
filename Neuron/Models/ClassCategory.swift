@@ -10,7 +10,7 @@ import Foundation
 struct ClassCategory: Codable, Comparable, Identifiable {
     let name: String
     let id: String
-    let classes: [Course]
+    var classes: [Course]
     
     static func < (lhs: ClassCategory, rhs: ClassCategory) -> Bool {
         if lhs.name != "Other" && rhs.name != "Other" {

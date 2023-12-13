@@ -1,5 +1,5 @@
 //
-//  CurrentClassesViw.swift
+//  CurrentClassesView.swift
 //  Neuron
 //
 //  Created by Hans de los Santos on 12/11/23.
@@ -16,12 +16,14 @@ struct CurrentClassesView: View {
         
         ScrollView(.vertical) {
             LazyVStack(alignment: .leading) {
-                ForEach(viewModel.categories.sorted()) { category in
-                    if category.shouldShow(for: viewModel.searchQuery) {
-                        Text(category.name)
-                            .font(Font.custom("Maven Pro", size: 20).weight(.semibold))
-                        NCategoryRow(category: category)
-                            .environmentObject(viewModel)
+                if viewModel.categories.count != 0 {
+                    ForEach(viewModel.categories.indices) { i in
+                        if viewModel.categories[i].shouldShow(for: viewModel.searchQuery) {
+                            Text(viewModel.categories[i].name)
+                                .font(Font.custom("Maven Pro", size: 20).weight(.semibold))
+                            NCategoryRow(category: $viewModel.categories[i])
+                                .environmentObject(viewModel)
+                        }
                     }
                 }
             }

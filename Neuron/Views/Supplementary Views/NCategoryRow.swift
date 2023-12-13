@@ -9,15 +9,16 @@ import SwiftUI
 
 struct NCategoryRow: View {
     @EnvironmentObject var viewModel: RegisterViewModel
-    
-    let category: ClassCategory
+    @Binding var category: ClassCategory
     
     var body: some View {
-        ForEach(category.classes.sorted()) { course in
-            if course.name.lowercased().contains(viewModel.searchQuery.lowercased()) || viewModel.searchQuery.trimmingCharacters(in: .whitespaces).isEmpty {
-                NCourseRow(course: course)
-                    .environmentObject(viewModel)
-                    .padding(.leading, 25)
+        if category.classes.count != 0 {
+            ForEach(category.classes.indices) { i in
+                if category.classes[i].name.lowercased().contains(viewModel.searchQuery.lowercased()) || viewModel.searchQuery.trimmingCharacters(in: .whitespaces).isEmpty {
+                    NCourseRow(course: $category.classes[i])
+                        .environmentObject(viewModel)
+                        .padding(.leading, 25)
+                }
             }
         }
     }

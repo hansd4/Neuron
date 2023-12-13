@@ -11,7 +11,7 @@ import Foundation
 import SwiftUI
 import PhotosUI
 
-class RegisterViewModel: ObservableObject {
+@MainActor class RegisterViewModel: ObservableObject {
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""
@@ -150,6 +150,7 @@ class RegisterViewModel: ObservableObject {
     }
     
     func refreshClasses() {
+        // getting class directory from firebase
         categories.removeAll()
         let db = Firestore.firestore()
         db.collection("classes").getDocuments() { (querySnapshot, err) in
@@ -158,6 +159,23 @@ class RegisterViewModel: ObservableObject {
             } else {
                 for document in querySnapshot!.documents {
                     self.categories.append(ClassCategory.fromDictionary(document.data())!)
+                }
+            }
+        }
+        
+        // sorting results
+        categories.sort()
+        for i in categories.indices {
+            categories[i].classes.sort()
+        }
+    }
+    
+    func updateCurrentClasses() {
+        currentClasses.removeAll()
+        for category in categories {
+            for course in category.classes {
+                if course.selected {
+                    currentClasses.append(course.name)
                 }
             }
         }

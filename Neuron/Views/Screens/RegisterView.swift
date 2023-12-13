@@ -28,7 +28,8 @@ struct RegisterView: View {
                     case 3:
                         CurrentClassesView()
                             .environmentObject(viewModel)
-                            .onAppear(perform: viewModel.refreshClasses)
+                            .onFirstAppear(perform: viewModel.refreshClasses)
+                            .onDisappear(perform: viewModel.updateCurrentClasses)
                     case 4:
                         TutorClassesView()
                             .environmentObject(viewModel)
