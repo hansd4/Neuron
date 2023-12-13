@@ -182,27 +182,18 @@ struct Classes {
     
     static func sendToFirebase() {
         let db = Firestore.firestore()
+        let collectionRef = db.collection("classes")
         
         for category in CLASSES.keys {
-            let categoryID = UUID().uuidString
-            db.collection("classes")
-                .document(categoryID)
-                .setData([
-                    "name": category,
-                    "id": categoryID
-                ])
-            
-            for course in CLASSES[category]! {
-                let courseID = UUID().uuidString
-                
-                db.collection("classes")
-                    .document(categoryID)
-                    .collection("classes")
-                    .document(courseID)
-                    .setData([
-                        "name": course,
-                        "id": courseID
-                    ])
+            do {
+                var classes: [Course] = []
+                for course in CLASSES[category]! {
+                    classes.append(Course(name: course, id: UUID().uuidString))
+                }
+                try collectionRef.addDocument(from: ClassCategory(name: category, id: UUID().uuidString, classes: classes))
+            }
+            catch {
+                print(error)
             }
         }
     }

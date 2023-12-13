@@ -27,7 +27,7 @@ struct NButton: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 3)
                     .foregroundStyle(background)
-                    .frame(width: .infinity, height: 35)
+                    .frame(maxWidth: .infinity, maxHeight: 35)
                 
                 Text(title)
                     .foregroundStyle(foreground)

@@ -31,6 +31,7 @@ class RegisterViewModel: ObservableObject {
     }
     @Published var pfpImage: Image?
     
+    @Published var categories = [ClassCategory]()
     @Published var searchQuery = ""
     
     init() {}
@@ -146,5 +147,19 @@ class RegisterViewModel: ObservableObject {
         guard let uiImage = UIImage(data: imageData) else { return }
         self.pfp = uiImage
         self.pfpImage = Image(uiImage: uiImage)
+    }
+    
+    func refreshClasses() {
+        categories.removeAll()
+        let db = Firestore.firestore()
+        db.collection("classes").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    self.categories.append(ClassCategory.fromDictionary(document.data())!)
+                }
+            }
+        }
     }
 }

@@ -9,9 +9,9 @@ import SwiftUI
 
 struct NCourseRow: View {
     @EnvironmentObject var viewModel: RegisterViewModel
-    @State private var selected = false
-    
     let course: Course
+    
+    @State private var selected = false
     
     var body: some View {
         Toggle(isOn: $selected) {

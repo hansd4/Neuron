@@ -43,7 +43,7 @@ struct LoginView: View {
                             RoundedRectangle(cornerRadius: 5)
                                 .fill(Color(uiColor: .systemBackground))
                                 .stroke(.secondary, lineWidth: 1)
-                                .frame(width: .infinity, height: 225)
+                                .frame(maxWidth: .infinity, maxHeight: 225)
                                 .padding()
                             
                             VStack(alignment: .leading) {
