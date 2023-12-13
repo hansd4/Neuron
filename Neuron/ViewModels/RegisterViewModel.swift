@@ -26,6 +26,8 @@ import PhotosUI
     @Published var errorMessage = ""
     @Published var showingError = false
     
+    @Published var showingCancelAlert = false
+    
     @Published var pfpItem: PhotosPickerItem? {
         didSet { Task { try await loadImage() } }
     }

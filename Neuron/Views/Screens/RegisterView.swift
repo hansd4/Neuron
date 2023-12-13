@@ -62,6 +62,14 @@ struct RegisterView: View {
                     }
                 }
                 .padding()
+                .alert("Are you sure you want to leave?", isPresented: $viewModel.showingCancelAlert) {
+                    Button("Leave", role: .destructive) {
+                        showingRegister = false
+                    }
+                    .bold()
+                } message: {
+                    Text("You will lose all your progress.")
+                }
                 
                 Spacer()
             }
@@ -90,7 +98,7 @@ struct RegisterView: View {
                 
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button {
-                        showingRegister = false
+                        viewModel.showingCancelAlert = true
                     } label: {
                         Text("Cancel")
                             .font(Font.custom("Maven Pro", size: 16)

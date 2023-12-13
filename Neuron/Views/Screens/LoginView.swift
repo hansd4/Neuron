@@ -84,6 +84,7 @@ struct LoginView: View {
                         .font(Font.custom("Maven Pro", size: 16))
                         .sheet(isPresented: $viewModel.showingRegister) {
                             RegisterView(showingRegister: $viewModel.showingRegister)
+                                .interactiveDismissDisabled()
                         }
                         Spacer()
                         Spacer()

@@ -15,7 +15,6 @@ struct MainView: View {
             accountView
         } else {
             LoginView()
-                .interactiveDismissDisabled()
         }
     }
     
