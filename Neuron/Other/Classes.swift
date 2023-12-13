@@ -4,8 +4,10 @@
 //
 //  Created by Hans de los Santos on 12/12/23.
 //
+//  TEMP CLASS; ALL CLASSES NOW STORED IN FIREBASE
 
 import Foundation
+import FirebaseFirestore
 
 struct Classes {
     static let CLASSES = [
@@ -177,4 +179,31 @@ struct Classes {
             "Weston Scholars Reasearch: Capstone"
         ]
     ]
+    
+    static func sendToFirebase() {
+        let db = Firestore.firestore()
+        
+        for category in CLASSES.keys {
+            let categoryID = UUID().uuidString
+            db.collection("classes")
+                .document(categoryID)
+                .setData([
+                    "name": category,
+                    "id": categoryID
+                ])
+            
+            for course in CLASSES[category]! {
+                let courseID = UUID().uuidString
+                
+                db.collection("classes")
+                    .document(categoryID)
+                    .collection("classes")
+                    .document(courseID)
+                    .setData([
+                        "name": course,
+                        "id": courseID
+                    ])
+            }
+        }
+    }
 }

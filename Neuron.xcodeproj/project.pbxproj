@@ -37,7 +37,10 @@
 		BB49B3EF2B27F53A00077999 /* NSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3EE2B27F53A00077999 /* NSecureField.swift */; };
 		BB49B3F52B281A9400077999 /* NPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3F42B281A9400077999 /* NPhotoPicker.swift */; };
 		BB49B3F82B28216600077999 /* NTextCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3F72B28216600077999 /* NTextCaption.swift */; };
-		BB6F45512B2888DB008D0CAC /* CourseCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45502B2888DB008D0CAC /* CourseCategory.swift */; };
+		BB6F45562B2926AD008D0CAC /* NCategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45552B2926AD008D0CAC /* NCategoryRow.swift */; };
+		BB6F45582B2927D5008D0CAC /* ClassCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45572B2927D5008D0CAC /* ClassCategory.swift */; };
+		BB6F455A2B2929F2008D0CAC /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45592B2929F2008D0CAC /* Course.swift */; };
+		BB6F455C2B292ED6008D0CAC /* NCourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F455B2B292ED6008D0CAC /* NCourseRow.swift */; };
 		BBC2BEED2B25485A00FC3F8C /* NeuronApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2BEEC2B25485A00FC3F8C /* NeuronApp.swift */; };
 		BBC2BEEF2B25485A00FC3F8C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2BEEE2B25485A00FC3F8C /* MainView.swift */; };
 		BBC2BEF12B25485B00FC3F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC2BEF02B25485B00FC3F8C /* Assets.xcassets */; };
@@ -74,7 +77,10 @@
 		BB49B3EE2B27F53A00077999 /* NSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSecureField.swift; sourceTree = "<group>"; };
 		BB49B3F42B281A9400077999 /* NPhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPhotoPicker.swift; sourceTree = "<group>"; };
 		BB49B3F72B28216600077999 /* NTextCaption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTextCaption.swift; sourceTree = "<group>"; };
-		BB6F45502B2888DB008D0CAC /* CourseCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCategory.swift; sourceTree = "<group>"; };
+		BB6F45552B2926AD008D0CAC /* NCategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCategoryRow.swift; sourceTree = "<group>"; };
+		BB6F45572B2927D5008D0CAC /* ClassCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCategory.swift; sourceTree = "<group>"; };
+		BB6F45592B2929F2008D0CAC /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		BB6F455B2B292ED6008D0CAC /* NCourseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCourseRow.swift; sourceTree = "<group>"; };
 		BBC2BEE92B25485A00FC3F8C /* Neuron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neuron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC2BEEC2B25485A00FC3F8C /* NeuronApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuronApp.swift; sourceTree = "<group>"; };
 		BBC2BEEE2B25485A00FC3F8C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -127,7 +133,8 @@
 			children = (
 				BB06038C2B2650420095C864 /* User.swift */,
 				BB06038E2B26504C0095C864 /* ToDoListItem.swift */,
-				BB6F45502B2888DB008D0CAC /* CourseCategory.swift */,
+				BB6F45572B2927D5008D0CAC /* ClassCategory.swift */,
+				BB6F45592B2929F2008D0CAC /* Course.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +166,8 @@
 				BB49B3EE2B27F53A00077999 /* NSecureField.swift */,
 				BB49B3F42B281A9400077999 /* NPhotoPicker.swift */,
 				BB49B3F72B28216600077999 /* NTextCaption.swift */,
+				BB6F45552B2926AD008D0CAC /* NCategoryRow.swift */,
+				BB6F455B2B292ED6008D0CAC /* NCourseRow.swift */,
 			);
 			path = "Supplementary Views";
 			sourceTree = "<group>";
@@ -317,6 +326,7 @@
 				BB0603892B264FF20095C864 /* RegisterView.swift in Sources */,
 				BB06039F2B2650E10095C864 /* ToDoListItemViewModel.swift in Sources */,
 				BB49B3F52B281A9400077999 /* NPhotoPicker.swift in Sources */,
+				BB6F455C2B292ED6008D0CAC /* NCourseRow.swift in Sources */,
 				BBDE5E902B2829BE001E1248 /* Classes.swift in Sources */,
 				BB06039B2B2650CB0095C864 /* LoginViewModel.swift in Sources */,
 				BB0603992B2650BE0095C864 /* NewItemViewModel.swift in Sources */,
@@ -324,10 +334,12 @@
 				BB0603E22B2704750095C864 /* CurrentClassesView.swift in Sources */,
 				BB0603872B264FE10095C864 /* LoginView.swift in Sources */,
 				BB0603A52B26667A0095C864 /* Extensions.swift in Sources */,
+				BB6F45582B2927D5008D0CAC /* ClassCategory.swift in Sources */,
+				BB6F455A2B2929F2008D0CAC /* Course.swift in Sources */,
+				BB6F45562B2926AD008D0CAC /* NCategoryRow.swift in Sources */,
 				BBC2BEED2B25485A00FC3F8C /* NeuronApp.swift in Sources */,
 				BB0603972B2650A80095C864 /* ToDoListViewModel.swift in Sources */,
 				BB06038F2B26504C0095C864 /* ToDoListItem.swift in Sources */,
-				BB6F45512B2888DB008D0CAC /* CourseCategory.swift in Sources */,
 				BB0603E42B27048F0095C864 /* TutorClassesView.swift in Sources */,
 				BB0603932B2650930095C864 /* MainViewModel.swift in Sources */,
 				BB49B3E92B27436800077999 /* EmailView.swift in Sources */,

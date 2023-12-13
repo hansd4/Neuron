@@ -6,18 +6,23 @@
 //
 
 import SwiftUI
+import FirebaseFirestoreSwift
 
 struct CurrentClassesView: View {
     @EnvironmentObject var viewModel: RegisterViewModel
+    @FirestoreQuery(collectionPath: "classes") var categories: [ClassCategory]
     
     var body: some View {
         NTextField(title: "Search for your current classes", placeholder: "AP Calculus AB", text: $viewModel.searchQuery)
         
-        ForEach(CourseCategory.allCategories) { category in
-            Text(category.name)
-            ForEach(category.courses, id: \.self) { course in
-                Text(course)
-                    .padding(.leading)
+        ScrollView {
+            VStack(alignment: .leading) {
+                ForEach(categories) { category in
+                    Text(category.name)
+                        .font(Font.custom("Maven Pro", size: 20).weight(.semibold))
+                    NCategoryRow(categoryID: category.id)
+                        .environmentObject(viewModel)
+                }
             }
         }
     }
