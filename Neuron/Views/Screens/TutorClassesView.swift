@@ -11,7 +11,10 @@ struct TutorClassesView: View {
     @EnvironmentObject var viewModel: RegisterViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NClassPicker(title: "Classes you can tutor",
+                     searchText: $viewModel.searchQuery,
+                     categories: $viewModel.categories,
+                     update: viewModel.updateTutorClasses)
     }
 }
 

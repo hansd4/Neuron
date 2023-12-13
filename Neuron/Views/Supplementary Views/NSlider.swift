@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct NSlider: View {
+    let title: String
+    
+    @Binding var progress: Double
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        VStack(alignment: .leading) {
+            HStack {
+                Text(title)
+                    .font(Font.custom("Maven Pro", size: 16).weight(.medium))
+                Spacer()
+                Text("\(progress * 10, specifier: "%.1f")")
+                    .font(Font.custom("Maven Pro", size: 20).weight(.semibold))
+            }
+            
+            ZStack {
+                LinearGradient(colors: [
+                                   Color(.appLightBlue),
+                                   Color(.appDarkBlue)],
+                               startPoint: .leading,
+                               endPoint: .trailing)
+                .mask(Slider(value: $progress, in: 0...1, step: 0.01))
 
-#Preview {
-    NSlider()
+                Slider(value: $progress, in: 0...1, step: 0.01)
+                      .opacity(0.05)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.bottom, 15)
+        .padding(.trailing, 10)
+    }
 }

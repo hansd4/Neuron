@@ -37,8 +37,10 @@ import PhotosUI
     init() {}
     
     func register() {
-        guard validate() else {
-            return
+        for key in tutorClasses.keys {
+            for pref in tutorClasses[key]! {
+                print("\(key) : \(tutorClasses[key]?[pref])")
+            }
         }
         
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
@@ -179,5 +181,23 @@ import PhotosUI
                 }
             }
         }
+        searchQuery = ""
+        print("Current classes updated: \(currentClasses)")
+    }
+    
+    func updateTutorClasses() {
+        tutorClasses.removeAll()
+        for category in categories {
+            for course in category.classes {
+                if course.selected {
+                    tutorClasses[course.name] = [
+                        "pref":1.0,
+                        "xp":0.0
+                    ]
+                }
+            }
+        }
+        searchQuery = ""
+        print("Tutor classes updated: \(tutorClasses)")
     }
 }

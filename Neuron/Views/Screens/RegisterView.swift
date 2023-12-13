@@ -28,10 +28,11 @@ struct RegisterView: View {
                     case 3:
                         CurrentClassesView()
                             .environmentObject(viewModel)
-                            .onFirstAppear(perform: viewModel.refreshClasses)
-                            .onDisappear(perform: viewModel.updateCurrentClasses)
                     case 4:
                         TutorClassesView()
+                            .environmentObject(viewModel)
+                    case 5:
+                        TutorPreferencesView()
                             .environmentObject(viewModel)
                     default:
                         Text("Error showing views: invalid screen code \(viewModel.activeScreen)")
@@ -53,6 +54,10 @@ struct RegisterView: View {
                             } message: {
                                 Text(viewModel.errorMessage)
                             }
+                        }
+                    } else if (viewModel.activeScreen == 5) {
+                        NButton(title: "Register", background: Color(.appDarkBlue)) {
+                            viewModel.register()
                         }
                     }
                 }
@@ -95,6 +100,7 @@ struct RegisterView: View {
                 }
             }
         }
+        .onAppear(perform: viewModel.refreshClasses)
     }
 }
 

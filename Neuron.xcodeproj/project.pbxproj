@@ -41,6 +41,9 @@
 		BB6F45582B2927D5008D0CAC /* ClassCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45572B2927D5008D0CAC /* ClassCategory.swift */; };
 		BB6F455A2B2929F2008D0CAC /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45592B2929F2008D0CAC /* Course.swift */; };
 		BB6F455C2B292ED6008D0CAC /* NCourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F455B2B292ED6008D0CAC /* NCourseRow.swift */; };
+		BB6F45642B2982BC008D0CAC /* TutorPreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45632B2982BC008D0CAC /* TutorPreferencesView.swift */; };
+		BB6F45662B298326008D0CAC /* NClassPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45652B298326008D0CAC /* NClassPicker.swift */; };
+		BB6F45682B2990D0008D0CAC /* NSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45672B2990D0008D0CAC /* NSlider.swift */; };
 		BBC2BEED2B25485A00FC3F8C /* NeuronApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2BEEC2B25485A00FC3F8C /* NeuronApp.swift */; };
 		BBC2BEEF2B25485A00FC3F8C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2BEEE2B25485A00FC3F8C /* MainView.swift */; };
 		BBC2BEF12B25485B00FC3F8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC2BEF02B25485B00FC3F8C /* Assets.xcassets */; };
@@ -81,6 +84,9 @@
 		BB6F45572B2927D5008D0CAC /* ClassCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCategory.swift; sourceTree = "<group>"; };
 		BB6F45592B2929F2008D0CAC /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		BB6F455B2B292ED6008D0CAC /* NCourseRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCourseRow.swift; sourceTree = "<group>"; };
+		BB6F45632B2982BC008D0CAC /* TutorPreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorPreferencesView.swift; sourceTree = "<group>"; };
+		BB6F45652B298326008D0CAC /* NClassPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NClassPicker.swift; sourceTree = "<group>"; };
+		BB6F45672B2990D0008D0CAC /* NSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSlider.swift; sourceTree = "<group>"; };
 		BBC2BEE92B25485A00FC3F8C /* Neuron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neuron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC2BEEC2B25485A00FC3F8C /* NeuronApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuronApp.swift; sourceTree = "<group>"; };
 		BBC2BEEE2B25485A00FC3F8C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -149,11 +155,12 @@
 				BB0603862B264FE10095C864 /* LoginView.swift */,
 				BB0603882B264FF20095C864 /* RegisterView.swift */,
 				BB06038A2B26500B0095C864 /* ToDoListItemView.swift */,
+				BB49B3E82B27436800077999 /* EmailView.swift */,
 				BB0603DD2B27045B0095C864 /* PersonalInfoView.swift */,
 				BB0603DF2B27046A0095C864 /* ProfilePictureView.swift */,
 				BB0603E12B2704750095C864 /* CurrentClassesView.swift */,
 				BB0603E32B27048F0095C864 /* TutorClassesView.swift */,
-				BB49B3E82B27436800077999 /* EmailView.swift */,
+				BB6F45632B2982BC008D0CAC /* TutorPreferencesView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -168,6 +175,8 @@
 				BB49B3F72B28216600077999 /* NTextCaption.swift */,
 				BB6F45552B2926AD008D0CAC /* NCategoryRow.swift */,
 				BB6F455B2B292ED6008D0CAC /* NCourseRow.swift */,
+				BB6F45652B298326008D0CAC /* NClassPicker.swift */,
+				BB6F45672B2990D0008D0CAC /* NSlider.swift */,
 			);
 			path = "Supplementary Views";
 			sourceTree = "<group>";
@@ -314,10 +323,12 @@
 				BB0603E02B27046A0095C864 /* ProfilePictureView.swift in Sources */,
 				BB0603852B264FCF0095C864 /* NewItemView.swift in Sources */,
 				BB06038B2B26500B0095C864 /* ToDoListItemView.swift in Sources */,
+				BB6F45642B2982BC008D0CAC /* TutorPreferencesView.swift in Sources */,
 				BB0603912B26506A0095C864 /* ProfileView.swift in Sources */,
 				BB06039D2B2650D60095C864 /* RegisterViewModel.swift in Sources */,
 				BB49B3F82B28216600077999 /* NTextCaption.swift in Sources */,
 				BBC2BEEF2B25485A00FC3F8C /* MainView.swift in Sources */,
+				BB6F45682B2990D0008D0CAC /* NSlider.swift in Sources */,
 				BB0603832B264FAA0095C864 /* ToDoListView.swift in Sources */,
 				BB0603A32B265A320095C864 /* NButton.swift in Sources */,
 				BB06038D2B2650420095C864 /* User.swift in Sources */,
@@ -326,6 +337,7 @@
 				BB0603892B264FF20095C864 /* RegisterView.swift in Sources */,
 				BB06039F2B2650E10095C864 /* ToDoListItemViewModel.swift in Sources */,
 				BB49B3F52B281A9400077999 /* NPhotoPicker.swift in Sources */,
+				BB6F45662B298326008D0CAC /* NClassPicker.swift in Sources */,
 				BB6F455C2B292ED6008D0CAC /* NCourseRow.swift in Sources */,
 				BBDE5E902B2829BE001E1248 /* Classes.swift in Sources */,
 				BB06039B2B2650CB0095C864 /* LoginViewModel.swift in Sources */,
