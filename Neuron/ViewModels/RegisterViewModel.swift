@@ -39,7 +39,7 @@ import PhotosUI
     func register() {
         for key in tutorClasses.keys {
             for pref in tutorClasses[key]! {
-                print("\(key) : \(tutorClasses[key]?[pref])")
+                // print("\(key) : \(tutorClasses[key]?[pref])")
             }
         }
         
