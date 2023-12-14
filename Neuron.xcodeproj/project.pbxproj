@@ -50,6 +50,15 @@
 		BBC2BEF42B25485B00FC3F8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC2BEF32B25485B00FC3F8C /* Preview Assets.xcassets */; };
 		BBC2BEFD2B25879000FC3F8C /* MavenPro-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBC2BEFC2B25879000FC3F8C /* MavenPro-VariableFont_wght.ttf */; };
 		BBDE5E902B2829BE001E1248 /* Classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE5E8F2B2829BE001E1248 /* Classes.swift */; };
+		BBFDC9302B2A1A1400E87352 /* SentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC92F2B2A1A1400E87352 /* SentView.swift */; };
+		BBFDC9322B2A1A2200E87352 /* ReceivedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC9312B2A1A2200E87352 /* ReceivedView.swift */; };
+		BBFDC9342B2A1C0F00E87352 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC9332B2A1C0F00E87352 /* SettingsView.swift */; };
+		BBFDC9362B2A1E1100E87352 /* CreatePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC9352B2A1E1100E87352 /* CreatePostView.swift */; };
+		BBFDC9382B2A1F1000E87352 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC9372B2A1F1000E87352 /* Post.swift */; };
+		BBFDC93A2B2A20C600E87352 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC9392B2A20C600E87352 /* Comment.swift */; };
+		BBFDC93C2B2A77E900E87352 /* NProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC93B2B2A77E900E87352 /* NProfilePicture.swift */; };
+		BBFDC93F2B2A799200E87352 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BBFDC93E2B2A799200E87352 /* SDWebImageSwiftUI */; };
+		BBFDC9422B2A7A9B00E87352 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BBFDC9412B2A7A9B00E87352 /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +104,13 @@
 		BBC2BEFC2B25879000FC3F8C /* MavenPro-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		BBC2BF002B25899A00FC3F8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBDE5E8F2B2829BE001E1248 /* Classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classes.swift; sourceTree = "<group>"; };
+		BBFDC92F2B2A1A1400E87352 /* SentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentView.swift; sourceTree = "<group>"; };
+		BBFDC9312B2A1A2200E87352 /* ReceivedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedView.swift; sourceTree = "<group>"; };
+		BBFDC9332B2A1C0F00E87352 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BBFDC9352B2A1E1100E87352 /* CreatePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostView.swift; sourceTree = "<group>"; };
+		BBFDC9372B2A1F1000E87352 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BBFDC9392B2A20C600E87352 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		BBFDC93B2B2A77E900E87352 /* NProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NProfilePicture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +118,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFDC93F2B2A799200E87352 /* SDWebImageSwiftUI in Frameworks */,
 				BB0603C02B26B9780095C864 /* FirebaseFirestore in Frameworks */,
 				BB0603C42B26B9780095C864 /* FirebaseFirestoreSwift in Frameworks */,
+				BBFDC9422B2A7A9B00E87352 /* FirebaseStorage in Frameworks */,
 				BB0603B42B26B9780095C864 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +134,7 @@
 			children = (
 				BB49B3F12B27F57700077999 /* Supplementary Views */,
 				BB49B3F02B27F56E00077999 /* Screens */,
+				BBFDC9352B2A1E1100E87352 /* CreatePostView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,6 +160,8 @@
 				BB06038E2B26504C0095C864 /* ToDoListItem.swift */,
 				BB6F45572B2927D5008D0CAC /* ClassCategory.swift */,
 				BB6F45592B2929F2008D0CAC /* Course.swift */,
+				BBFDC9372B2A1F1000E87352 /* Post.swift */,
+				BBFDC9392B2A20C600E87352 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +182,9 @@
 				BB0603E12B2704750095C864 /* CurrentClassesView.swift */,
 				BB0603E32B27048F0095C864 /* TutorClassesView.swift */,
 				BB6F45632B2982BC008D0CAC /* TutorPreferencesView.swift */,
+				BBFDC92F2B2A1A1400E87352 /* SentView.swift */,
+				BBFDC9312B2A1A2200E87352 /* ReceivedView.swift */,
+				BBFDC9332B2A1C0F00E87352 /* SettingsView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -177,6 +201,7 @@
 				BB6F455B2B292ED6008D0CAC /* NCourseRow.swift */,
 				BB6F45652B298326008D0CAC /* NClassPicker.swift */,
 				BB6F45672B2990D0008D0CAC /* NSlider.swift */,
+				BBFDC93B2B2A77E900E87352 /* NProfilePicture.swift */,
 			);
 			path = "Supplementary Views";
 			sourceTree = "<group>";
@@ -200,6 +225,7 @@
 			children = (
 				BBC2BEEB2B25485A00FC3F8C /* Neuron */,
 				BBC2BEEA2B25485A00FC3F8C /* Products */,
+				BBFDC9402B2A7A9B00E87352 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,6 +265,13 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		BBFDC9402B2A7A9B00E87352 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -259,6 +292,8 @@
 				BB0603B32B26B9780095C864 /* FirebaseAuth */,
 				BB0603BF2B26B9780095C864 /* FirebaseFirestore */,
 				BB0603C32B26B9780095C864 /* FirebaseFirestoreSwift */,
+				BBFDC93E2B2A799200E87352 /* SDWebImageSwiftUI */,
+				BBFDC9412B2A7A9B00E87352 /* FirebaseStorage */,
 			);
 			productName = Neuron;
 			productReference = BBC2BEE92B25485A00FC3F8C /* Neuron.app */;
@@ -290,6 +325,7 @@
 			mainGroup = BBC2BEE02B25485A00FC3F8C;
 			packageReferences = (
 				BB0603A62B26B9770095C864 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BBFDC93D2B2A799200E87352 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = BBC2BEEA2B25485A00FC3F8C /* Products */;
 			projectDirPath = "";
@@ -322,6 +358,7 @@
 				BB0603DE2B27045B0095C864 /* PersonalInfoView.swift in Sources */,
 				BB0603E02B27046A0095C864 /* ProfilePictureView.swift in Sources */,
 				BB0603852B264FCF0095C864 /* NewItemView.swift in Sources */,
+				BBFDC9382B2A1F1000E87352 /* Post.swift in Sources */,
 				BB06038B2B26500B0095C864 /* ToDoListItemView.swift in Sources */,
 				BB6F45642B2982BC008D0CAC /* TutorPreferencesView.swift in Sources */,
 				BB0603912B26506A0095C864 /* ProfileView.swift in Sources */,
@@ -331,6 +368,7 @@
 				BB6F45682B2990D0008D0CAC /* NSlider.swift in Sources */,
 				BB0603832B264FAA0095C864 /* ToDoListView.swift in Sources */,
 				BB0603A32B265A320095C864 /* NButton.swift in Sources */,
+				BBFDC9342B2A1C0F00E87352 /* SettingsView.swift in Sources */,
 				BB06038D2B2650420095C864 /* User.swift in Sources */,
 				BB0603952B26509E0095C864 /* ProfileViewModel.swift in Sources */,
 				BB49B3EF2B27F53A00077999 /* NSecureField.swift in Sources */,
@@ -338,23 +376,28 @@
 				BB06039F2B2650E10095C864 /* ToDoListItemViewModel.swift in Sources */,
 				BB49B3F52B281A9400077999 /* NPhotoPicker.swift in Sources */,
 				BB6F45662B298326008D0CAC /* NClassPicker.swift in Sources */,
+				BBFDC9362B2A1E1100E87352 /* CreatePostView.swift in Sources */,
 				BB6F455C2B292ED6008D0CAC /* NCourseRow.swift in Sources */,
 				BBDE5E902B2829BE001E1248 /* Classes.swift in Sources */,
 				BB06039B2B2650CB0095C864 /* LoginViewModel.swift in Sources */,
 				BB0603992B2650BE0095C864 /* NewItemViewModel.swift in Sources */,
+				BBFDC9322B2A1A2200E87352 /* ReceivedView.swift in Sources */,
 				BB49B3ED2B27E68400077999 /* NTextField.swift in Sources */,
 				BB0603E22B2704750095C864 /* CurrentClassesView.swift in Sources */,
 				BB0603872B264FE10095C864 /* LoginView.swift in Sources */,
 				BB0603A52B26667A0095C864 /* Extensions.swift in Sources */,
+				BBFDC93A2B2A20C600E87352 /* Comment.swift in Sources */,
 				BB6F45582B2927D5008D0CAC /* ClassCategory.swift in Sources */,
 				BB6F455A2B2929F2008D0CAC /* Course.swift in Sources */,
 				BB6F45562B2926AD008D0CAC /* NCategoryRow.swift in Sources */,
 				BBC2BEED2B25485A00FC3F8C /* NeuronApp.swift in Sources */,
 				BB0603972B2650A80095C864 /* ToDoListViewModel.swift in Sources */,
 				BB06038F2B26504C0095C864 /* ToDoListItem.swift in Sources */,
+				BBFDC93C2B2A77E900E87352 /* NProfilePicture.swift in Sources */,
 				BB0603E42B27048F0095C864 /* TutorClassesView.swift in Sources */,
 				BB0603932B2650930095C864 /* MainViewModel.swift in Sources */,
 				BB49B3E92B27436800077999 /* EmailView.swift in Sources */,
+				BBFDC9302B2A1A1400E87352 /* SentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +612,14 @@
 				minimumVersion = 10.19.0;
 			};
 		};
+		BBFDC93D2B2A799200E87352 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -586,6 +637,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BB0603A62B26B9770095C864 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		BBFDC93E2B2A799200E87352 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBFDC93D2B2A799200E87352 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		BBFDC9412B2A7A9B00E87352 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB0603A62B26B9770095C864 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

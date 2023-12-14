@@ -45,20 +45,25 @@ struct RegisterView: View {
                             }
                             .border(Color(.appDarkBlue))
                         } else {
-                            NButton(title: "Next", background: Color("appDarkBlue")) {
-                                guard viewModel.validate() else { return }
-                                viewModel.activeScreen += 1
-                            }
-                            .alert(viewModel.errorTitle, isPresented: $viewModel.showingError) {
-                                Button("Retry") {}
-                            } message: {
-                                Text(viewModel.errorMessage)
+                            if (!viewModel.registering) {
+                                NButton(title: "Next", background: Color("appDarkBlue")) {
+                                    guard viewModel.validate() else { return }
+                                    viewModel.activeScreen += 1
+                                }
+                                .alert(viewModel.errorTitle, isPresented: $viewModel.showingError) {
+                                    Button("Retry") {}
+                                } message: {
+                                    Text(viewModel.errorMessage)
+                                }
+                            } else {
+                                ProgressView()
                             }
                         }
                     } else if (viewModel.activeScreen == 5) {
                         NButton(title: "Register", background: Color(.appDarkBlue)) {
                             viewModel.register()
                         }
+                        
                     }
                 }
                 .padding()
@@ -74,7 +79,7 @@ struct RegisterView: View {
                 Spacer()
             }
             .toolbar {
-                if (viewModel.activeScreen > 0) {
+                if (viewModel.activeScreen > 0 && !viewModel.registering) {
                     ToolbarItemGroup(placement: .topBarLeading) {
                         Button {
                             viewModel.activeScreen -= 1

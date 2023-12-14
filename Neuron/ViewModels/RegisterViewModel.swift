@@ -5,6 +5,7 @@
 //  Created by Hans de los Santos on 12/10/23.
 //
 
+import FirebaseStorage
 import FirebaseFirestore
 import FirebaseAuth
 import Foundation
@@ -15,14 +16,10 @@ import PhotosUI
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""
-    @Published var pfp = UIImage(systemName: "person.circle.fill")
+    @Published var pfp = UIImage(named: "default")
     @Published var OSIS = ""
     @Published var currentClasses = [String]()
-    @Published var tutorClasses = [String:[String:Double]]() {
-        didSet {
-            print(String(data: try! JSONSerialization.data(withJSONObject: tutorClasses, options: .prettyPrinted), encoding: .utf8)!)
-        }
-    }
+    @Published var tutorClasses = [String:[String:Double]]()
     
     @Published var activeScreen = 0
     
@@ -40,24 +37,56 @@ import PhotosUI
     @Published var categories = [ClassCategory]()
     @Published var searchQuery = ""
     
+    @Published var registering = false
+    
     init() {}
     
     func register() {
+            registering = true
             Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
-            guard let userID = result?.user.uid else {
-                print("Error signing up: \(error)")
+                guard (result?.user.uid) != nil else {
+                self?.registering = false
                 return
             }
             
-            self?.insertUserRecord(id: userID)
+            self?.sendImageToFirebase()
         }
     }
     
-    private func insertUserRecord(id: String) {
+    private func sendImageToFirebase() {
+        let store = Storage.storage()
+        
+        guard let uid = Auth.auth().currentUser?.uid else {
+            registering = false
+            return
+        }
+        let ref = store.reference(withPath: uid)
+        guard let imageData = pfp?.jpegData(compressionQuality: 0.5) else {
+            registering = false
+            return
+        }
+        ref.putData(imageData, metadata: nil) { [weak self] _, err in
+            if let err = err {
+                self?.registering = false
+                return
+            }
+            
+            ref.downloadURL { url, err in
+                if let err = err {
+                    self?.registering = false
+                    return
+                }
+                
+                self?.insertUserRecord(id: uid, pfp: url?.absoluteString ?? "")
+            }
+        }
+    }
+    
+    private func insertUserRecord(id: String, pfp: String) {
         let newUser = User(id: id,
                            name: name,
                            email: email,
-                           pfp: pfp?.jpegData(compressionQuality: 0.5) ?? Data(),
+                           pfp: pfp,
                            OSIS: OSIS,
                            currentClasses: currentClasses,
                            tutorClasses: tutorClasses)
@@ -67,6 +96,8 @@ import PhotosUI
         db.collection("users")
             .document(id)
             .setData(newUser.asDictionary())
+        
+        registering = false
     }
     
     func validate() -> Bool {

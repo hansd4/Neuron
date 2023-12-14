@@ -11,7 +11,7 @@ struct User: Codable {
     let id: String
     let name: String
     let email: String
-    let pfp: Data
+    let pfp: String
     let OSIS: String
     let currentClasses: [String]
     let tutorClasses: [String:[String:Double]]

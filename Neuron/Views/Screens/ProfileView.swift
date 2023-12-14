@@ -14,50 +14,45 @@ struct ProfileView: View {
         NavigationView {
             VStack {
                 if let user = viewModel.user {
-                    profile(user: user)
+                    ZStack {
+                        Color(.appDarkBlue)
+                            .ignoresSafeArea()
+                        
+                        HStack {
+                            NProfilePicture(url: user.pfp, size: 90)
+                            VStack(alignment: .leading) {
+                                Text(user.name)
+                                    .font(Font.custom("Maven Pro", size: 24).bold())
+                                Text(user.email)
+                                    .font(Font.custom("Maven Pro", size: 16))
+                                    .opacity(0.5)
+                            }
+                        }
+                        .padding()
+                    }
+                    .foregroundStyle(Color(.appOffWhite))
+                    .frame(maxWidth: .infinity, maxHeight: 80)
+                    
+                    ScrollView(.vertical) {
+                        LazyVStack(alignment: .leading) {
+                            ForEach(Array(user.tutorClasses.keys).sorted(), id: \.self) { key in
+                                Text(key)
+                                    .padding(.top)
+                            }
+                        }
+                    }
+                    .padding()
+                    .padding(.top, 20)
                 } else {
                     Text("Loading profile...")
+                    ProgressView()
                 }
             }
-            .navigationTitle("Profile")
         }
+        .font(Font.custom("Maven Pro", size: 18))
         .onAppear() {
             viewModel.fetchUser()
         }
-    }
-    
-    @ViewBuilder
-    func profile(user: User) -> some View {
-        Image(systemName: "person.circle")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .foregroundStyle(.blue)
-            .frame(width: 125, height: 125)
-            .padding()
-        
-        VStack(alignment: .leading) {
-            HStack {
-                Text("Name: ")
-                    .bold()
-                Text(user.name)
-            }
-            .padding()
-            HStack {
-                Text("Email: ")
-                    .bold()
-                Text(user.email)
-            }
-            .padding()
-        }
-        .padding()
-        
-        Button("Log Out") {
-            viewModel.logOut()
-        }
-        .tint(.red)
-        .padding()
-        
-        Spacer()
     }
 }
 

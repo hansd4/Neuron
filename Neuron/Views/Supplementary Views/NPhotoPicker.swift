@@ -28,10 +28,10 @@ struct NPhotoPicker: View {
                                 .frame(width: 160, height: 160)
                                 .clipShape(Circle())
                         } else {
-                            Image(systemName: "person.circle.fill")
+                            Image(systemName: "person.crop.circle.fill")
                                 .resizable()
                                 .frame(width: 160, height: 160)
-                                .foregroundStyle(Color(.appGray))
+                                .foregroundStyle(Color(.appBlue))
                         }
                     }
                     .shadow(radius: selection != nil ? 5 : 0)

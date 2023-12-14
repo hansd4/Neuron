@@ -31,7 +31,7 @@ class ProfileViewModel: ObservableObject {
                     id: data["id"] as? String ?? "",
                     name: data["name"] as? String ?? "",
                     email: data["email"] as? String ?? "",
-                    pfp: data["pfp"] as? Data ?? UIImage(systemName: "person.circle.fill")?.jpegData(compressionQuality: 0.5) ?? Data(),
+                    pfp: data["pfp"] as? String ?? "",
                     OSIS: data["OSIS"] as? String ?? "",
                     currentClasses: data["currentClasses"] as? [String] ?? [],
                     tutorClasses: data["tutorClasses"] as? [String:[String:Double]] ?? [:])
