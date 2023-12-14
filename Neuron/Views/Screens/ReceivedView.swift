@@ -9,12 +9,17 @@ import FirebaseFirestoreSwift
 import SwiftUI
 
 struct ReceivedView: View {
+    @EnvironmentObject var mainViewModel: MainViewModel
     @StateObject var viewModel = ReceivedViewModel()
     @FirestoreQuery(collectionPath: "posts") var posts: [Post]
     
     var body: some View {
-        ForEach(posts) {
-            NPostView(post: $0)
+        ScrollView(.vertical) {
+            LazyVStack(alignment: .leading) {
+                ForEach(posts) {
+                    NPostView(post: $0)
+                }
+            }
         }
     }
 }

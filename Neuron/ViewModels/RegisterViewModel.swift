@@ -45,8 +45,9 @@ import PhotosUI
             registering = true
             Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
                 guard (result?.user.uid) != nil else {
-                self?.registering = false
-                return
+                    print(error)
+                    self?.registering = false
+                    return
             }
             
             self?.sendImageToFirebase()
@@ -57,22 +58,26 @@ import PhotosUI
         let store = Storage.storage()
         
         guard let uid = Auth.auth().currentUser?.uid else {
+            print("Current user id could not be retrieved")
             registering = false
             return
         }
         let ref = store.reference(withPath: uid)
         guard let imageData = pfp?.jpegData(compressionQuality: 0.5) else {
+            print("Image data could not be converted")
             registering = false
             return
         }
         ref.putData(imageData, metadata: nil) { [weak self] _, err in
             if let err = err {
+                print(err)
                 self?.registering = false
                 return
             }
             
             ref.downloadURL { url, err in
                 if let err = err {
+                    print(err)
                     self?.registering = false
                     return
                 }

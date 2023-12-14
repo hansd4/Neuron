@@ -31,6 +31,7 @@ struct CreatePostView: View {
                     
                     NButton(title: "Post", background: Color(.appBlue)) {
                         viewModel.post()
+                        mainViewModel.tabSelection = 0
                     }
                 }
                 .font(Font.custom("Maven Pro", size: 18))

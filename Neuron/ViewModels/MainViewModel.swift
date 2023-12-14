@@ -14,6 +14,8 @@ class MainViewModel: ObservableObject {
     @Published var currentUserID = ""
     private var handler: AuthStateDidChangeListenerHandle?
     
+    @Published var tabSelection = 0
+    
     init() {
         self.handler = Auth.auth().addStateDidChangeListener { [weak self] _, user in
             DispatchQueue.main.async {
