@@ -9,8 +9,6 @@ import FirebaseAuth
 import FirebaseFirestore
 import SwiftUI
 
-
-// TODO: FINISH (USE PROFILEVIEW AS EXAMPLE OF HOW TO GET USER BEFORE IT HAS BEEN MADE SINCE IT RETURNS NIL SINCE MAINVIEWMODEL HASN'T FETCHED THE USER YET)
 struct CreatePostView: View {
     @EnvironmentObject var mainViewModel: MainViewModel
     @StateObject var viewModel = CreatePostViewModel()
@@ -32,6 +30,13 @@ struct CreatePostView: View {
                 NAttachmentPicker(title: "Add a photo (if applicable)", selection: $viewModel.pickerPicture, image: $viewModel.pictureImage)
                 
                 NButton(title: "Post", background: Color(.appBlue)) {
+                    if let uid = mainViewModel.user?.id {
+                        viewModel.authorID = uid
+                        print("Fetched user: \(uid)")
+                    } else {
+                        print("Could not fetch user")
+                    }
+                    
                     viewModel.post()
                     mainViewModel.tabSelection = 0
                 }
@@ -43,15 +48,6 @@ struct CreatePostView: View {
         .tint(Color(.appDarkBlue))
         .onAppear {
             mainViewModel.fetchUser()
-            if let uid = mainViewModel.user?.id {
-                viewModel.authorID = uid
-                print("Fetched user: \(uid)")
-            } else {
-                if let user = mainViewModel.user {
-                    print("Could not fetch user \(user.name)")
-                }
-                print("Could not fetch user")
-            }
         }
     }
 }
