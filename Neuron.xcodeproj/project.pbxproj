@@ -59,6 +59,8 @@
 		BBFDC93C2B2A77E900E87352 /* NProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC93B2B2A77E900E87352 /* NProfilePicture.swift */; };
 		BBFDC93F2B2A799200E87352 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BBFDC93E2B2A799200E87352 /* SDWebImageSwiftUI */; };
 		BBFDC9422B2A7A9B00E87352 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BBFDC9412B2A7A9B00E87352 /* FirebaseStorage */; };
+		BBFDC9442B2A9EBD00E87352 /* NProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC9432B2A9EBD00E87352 /* NProgressBar.swift */; };
+		BBFDC9482B2AB56A00E87352 /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC9472B2AB56A00E87352 /* CreatePostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +113,8 @@
 		BBFDC9372B2A1F1000E87352 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BBFDC9392B2A20C600E87352 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		BBFDC93B2B2A77E900E87352 /* NProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NProfilePicture.swift; sourceTree = "<group>"; };
+		BBFDC9432B2A9EBD00E87352 /* NProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NProgressBar.swift; sourceTree = "<group>"; };
+		BBFDC9472B2AB56A00E87352 /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +138,6 @@
 			children = (
 				BB49B3F12B27F57700077999 /* Supplementary Views */,
 				BB49B3F02B27F56E00077999 /* Screens */,
-				BBFDC9352B2A1E1100E87352 /* CreatePostView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				BB06039A2B2650CB0095C864 /* LoginViewModel.swift */,
 				BB06039C2B2650D60095C864 /* RegisterViewModel.swift */,
 				BB06039E2B2650E10095C864 /* ToDoListItemViewModel.swift */,
+				BBFDC9472B2AB56A00E87352 /* CreatePostViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -185,6 +189,7 @@
 				BBFDC92F2B2A1A1400E87352 /* SentView.swift */,
 				BBFDC9312B2A1A2200E87352 /* ReceivedView.swift */,
 				BBFDC9332B2A1C0F00E87352 /* SettingsView.swift */,
+				BBFDC9352B2A1E1100E87352 /* CreatePostView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				BB6F45652B298326008D0CAC /* NClassPicker.swift */,
 				BB6F45672B2990D0008D0CAC /* NSlider.swift */,
 				BBFDC93B2B2A77E900E87352 /* NProfilePicture.swift */,
+				BBFDC9432B2A9EBD00E87352 /* NProgressBar.swift */,
 			);
 			path = "Supplementary Views";
 			sourceTree = "<group>";
@@ -368,9 +374,11 @@
 				BB6F45682B2990D0008D0CAC /* NSlider.swift in Sources */,
 				BB0603832B264FAA0095C864 /* ToDoListView.swift in Sources */,
 				BB0603A32B265A320095C864 /* NButton.swift in Sources */,
+				BBFDC9442B2A9EBD00E87352 /* NProgressBar.swift in Sources */,
 				BBFDC9342B2A1C0F00E87352 /* SettingsView.swift in Sources */,
 				BB06038D2B2650420095C864 /* User.swift in Sources */,
 				BB0603952B26509E0095C864 /* ProfileViewModel.swift in Sources */,
+				BBFDC9482B2AB56A00E87352 /* CreatePostViewModel.swift in Sources */,
 				BB49B3EF2B27F53A00077999 /* NSecureField.swift in Sources */,
 				BB0603892B264FF20095C864 /* RegisterView.swift in Sources */,
 				BB06039F2B2650E10095C864 /* ToDoListItemViewModel.swift in Sources */,

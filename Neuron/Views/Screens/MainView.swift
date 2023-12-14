@@ -15,7 +15,6 @@ struct MainView: View {
             accountView
         } else {
             LoginView()
-                .onAppear(perform: Classes.sendToFirebase)
         }
     }
     
@@ -24,27 +23,27 @@ struct MainView: View {
         TabView {
             ReceivedView()
                 .tabItem {
-                    Image(systemName: "questionmark.bubble.fill")
+                    Label("Posts", systemImage: "questionmark.bubble.fill")
                 }
             
             SentView()
                 .tabItem {
-                    Image(systemName: "person.fill.questionmark")
+                    Label("My Posts", systemImage: "person.fill.questionmark")
                 }
             
             CreatePostView()
                 .tabItem {
-                    Image(systemName: "plus")
+                    Label("Create Post", systemImage: "plus")
                 }
             
             ProfileView()
                 .tabItem {
-                    Image(systemName: "person.crop.circle")
+                    Label("My Profile", systemImage: "person.crop.circle")
                 }
             
             SettingsView()
                 .tabItem {
-                    Image(systemName: "gearshape.fill")
+                    Label("Settings", systemImage: "gearshape.fill")
                 }
         }
         .tint(Color(.appBlue))

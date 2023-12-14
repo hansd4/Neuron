@@ -32,12 +32,11 @@ struct ProfileView: View {
                     }
                     .foregroundStyle(Color(.appOffWhite))
                     .frame(maxWidth: .infinity, maxHeight: 80)
-                    
+                                        
                     ScrollView(.vertical) {
                         LazyVStack(alignment: .leading) {
                             ForEach(Array(user.tutorClasses.keys).sorted(), id: \.self) { key in
-                                Text(key)
-                                    .padding(.top)
+                                NProgressBar(title: key, xp: user.tutorClasses[key]?["xp"] ?? 0.0)
                             }
                         }
                     }
