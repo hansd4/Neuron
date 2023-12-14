@@ -15,4 +15,9 @@ struct User: Codable {
     let OSIS: String
     let currentClasses: [String]
     let tutorClasses: [String:[String:Double]]
+    
+    var currentClassesWithOther: [String] {
+        let newArray = ["Other"]
+        return newArray + currentClasses.sorted()
+    }
 }

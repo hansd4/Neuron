@@ -36,7 +36,6 @@ struct NAttachmentPicker: View {
                                 .padding()
                         }
                     }
-                    .shadow(radius: selection != nil ? 5 : 0)
                     .padding(.vertical)
                 } header: {
                     Text(title)

@@ -53,6 +53,6 @@ struct NProgressBar: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.bottom, 15)
-        .padding(.top, 20)
+        .padding(.trailing, 15)
     }
 }

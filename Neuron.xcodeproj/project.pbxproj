@@ -36,6 +36,7 @@
 		BB49B3EF2B27F53A00077999 /* NSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3EE2B27F53A00077999 /* NSecureField.swift */; };
 		BB49B3F52B281A9400077999 /* NPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3F42B281A9400077999 /* NPhotoPicker.swift */; };
 		BB49B3F82B28216600077999 /* NTextCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3F72B28216600077999 /* NTextCaption.swift */; };
+		BB5454A42B2B347100766B16 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5454A32B2B347100766B16 /* PostView.swift */; };
 		BB6F45562B2926AD008D0CAC /* NCategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45552B2926AD008D0CAC /* NCategoryRow.swift */; };
 		BB6F45582B2927D5008D0CAC /* ClassCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45572B2927D5008D0CAC /* ClassCategory.swift */; };
 		BB6F455A2B2929F2008D0CAC /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45592B2929F2008D0CAC /* Course.swift */; };
@@ -93,6 +94,7 @@
 		BB49B3EE2B27F53A00077999 /* NSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSecureField.swift; sourceTree = "<group>"; };
 		BB49B3F42B281A9400077999 /* NPhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPhotoPicker.swift; sourceTree = "<group>"; };
 		BB49B3F72B28216600077999 /* NTextCaption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTextCaption.swift; sourceTree = "<group>"; };
+		BB5454A32B2B347100766B16 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		BB6F45552B2926AD008D0CAC /* NCategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCategoryRow.swift; sourceTree = "<group>"; };
 		BB6F45572B2927D5008D0CAC /* ClassCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCategory.swift; sourceTree = "<group>"; };
 		BB6F45592B2929F2008D0CAC /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				BBFDC9312B2A1A2200E87352 /* ReceivedView.swift */,
 				BBFDC9332B2A1C0F00E87352 /* SettingsView.swift */,
 				BBFDC9352B2A1E1100E87352 /* CreatePostView.swift */,
+				BB5454A32B2B347100766B16 /* PostView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				BB06038B2B26500B0095C864 /* ToDoListItemView.swift in Sources */,
 				BB6F45642B2982BC008D0CAC /* TutorPreferencesView.swift in Sources */,
 				BB0603912B26506A0095C864 /* ProfileView.swift in Sources */,
+				BB5454A42B2B347100766B16 /* PostView.swift in Sources */,
 				BB06039D2B2650D60095C864 /* RegisterViewModel.swift in Sources */,
 				BB49B3F82B28216600077999 /* NTextCaption.swift in Sources */,
 				BBC2BEEF2B25485A00FC3F8C /* MainView.swift in Sources */,

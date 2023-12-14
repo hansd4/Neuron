@@ -10,11 +10,12 @@ import SwiftUI
 import PhotosUI
 import FirebaseStorage
 import FirebaseFirestore
+import FirebaseAuth
 
 @MainActor class CreatePostViewModel: ObservableObject {
     @Published var authorID = ""
     @Published var postDate = Date()
-    @Published var course = ""
+    @Published var course = "Other"
     @Published var title = ""
     @Published var description = ""
     @Published var picture: String? = ""
@@ -37,12 +38,47 @@ import FirebaseFirestore
     init() {}
     
     func post() {
+        storePicture()
+    }
+    
+    private func storePicture() {
+        let store = Storage.storage()
+        
+        let ref = store.reference(withPath: UUID().uuidString)
+        guard let data = picData else {
+            print("Error getting picData: picData was nil")
+            self.sendPostToFirebase(url: nil)
+            return
+        }
+        ref.putData(data, metadata: nil) { [weak self] _, err in
+            if let err = err {
+                print(err)
+                self?.sendPostToFirebase(url: nil)
+                return
+            }
+            
+            ref.downloadURL { url, err in
+                if let err = err {
+                    print(err)
+                    self?.sendPostToFirebase(url: nil)
+                    return
+                }
+                
+                if let url = url {
+                    print("Successfully posted image to \(url.absoluteString)")
+                    self?.sendPostToFirebase(url: url.absoluteString)
+                }
+            }
+        }
+    }
+    
+    private func sendPostToFirebase(url: String?) {
         let post = Post(authorID: authorID,
                         postDate: Date(),
                         course: course,
                         title: title,
                         description: description,
-                        picture: picture,
+                        picture: url,
                         comments: comments)
         
         let db = Firestore.firestore()
@@ -52,29 +88,5 @@ import FirebaseFirestore
         } catch {
             print(error)
         }
-    }
-    
-    private func storePicture() -> String? {
-        let store = Storage.storage()
-        
-        let ref = store.reference(withPath: UUID().uuidString)
-        guard let data = picData else { return nil }
-        var picURL: String? = nil
-        ref.putData(data, metadata: nil) { _, err in
-            if let err = err {
-                return
-            }
-            
-            ref.downloadURL { url, err in
-                if let err = err {
-                    return
-                }
-                
-                if let url = url {
-                    picURL = url.absoluteString
-                }
-            }
-        }
-        return picURL
     }
 }
