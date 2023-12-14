@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @StateObject var viewModel = ProfileViewModel()
+    @EnvironmentObject var viewModel: MainViewModel
     
     var body: some View {
         NavigationView {
@@ -43,8 +43,7 @@ struct ProfileView: View {
                     .padding()
                     .padding(.top, 20)
                 } else {
-                    Text("Loading profile...")
-                    ProgressView()
+                    NLoadingScreen()
                 }
             }
         }

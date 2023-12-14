@@ -8,10 +8,10 @@
 import Foundation
 import FirebaseFirestore
 
-struct Post: Codable {
+struct Post: Codable, Identifiable {
     @DocumentID var id: String?
     let authorID: String
-    let postDate: TimeInterval
+    let postDate: Date
     let course: String
     let title: String
     let description: String

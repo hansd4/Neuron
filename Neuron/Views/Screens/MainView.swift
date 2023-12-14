@@ -7,11 +7,12 @@
 
 import SwiftUI
 
+// TODO: figure out why i can no longer register myself as a new user
 struct MainView: View {
     @StateObject var viewModel = MainViewModel()
     
     var body: some View {
-        if viewModel.isSignedIn, !viewModel.currentUserID.isEmpty || true {
+        if viewModel.isSignedIn, !viewModel.currentUserID.isEmpty {
             accountView
         } else {
             LoginView()
@@ -35,16 +36,19 @@ struct MainView: View {
                 .tabItem {
                     Label("Create Post", systemImage: "plus")
                 }
+                .environmentObject(viewModel)
             
             ProfileView()
                 .tabItem {
                     Label("My Profile", systemImage: "person.crop.circle")
                 }
+                .environmentObject(viewModel)
             
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
+                .environmentObject(viewModel)
         }
         .tint(Color(.appBlue))
     }

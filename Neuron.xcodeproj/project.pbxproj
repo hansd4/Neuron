@@ -17,7 +17,6 @@
 		BB06038F2B26504C0095C864 /* ToDoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06038E2B26504C0095C864 /* ToDoListItem.swift */; };
 		BB0603912B26506A0095C864 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603902B26506A0095C864 /* ProfileView.swift */; };
 		BB0603932B2650930095C864 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603922B2650930095C864 /* MainViewModel.swift */; };
-		BB0603952B26509E0095C864 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603942B26509E0095C864 /* ProfileViewModel.swift */; };
 		BB0603972B2650A80095C864 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603962B2650A80095C864 /* ToDoListViewModel.swift */; };
 		BB0603992B2650BE0095C864 /* NewItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603982B2650BE0095C864 /* NewItemViewModel.swift */; };
 		BB06039B2B2650CB0095C864 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06039A2B2650CB0095C864 /* LoginViewModel.swift */; };
@@ -61,6 +60,10 @@
 		BBFDC9422B2A7A9B00E87352 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BBFDC9412B2A7A9B00E87352 /* FirebaseStorage */; };
 		BBFDC9442B2A9EBD00E87352 /* NProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC9432B2A9EBD00E87352 /* NProgressBar.swift */; };
 		BBFDC9482B2AB56A00E87352 /* CreatePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC9472B2AB56A00E87352 /* CreatePostViewModel.swift */; };
+		BBFDC94A2B2ABC2E00E87352 /* NLoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC9492B2ABC2E00E87352 /* NLoadingScreen.swift */; };
+		BBFDC94C2B2AC23C00E87352 /* NAttachmentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC94B2B2AC23C00E87352 /* NAttachmentPicker.swift */; };
+		BBFDC94E2B2ACF4F00E87352 /* NPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC94D2B2ACF4F00E87352 /* NPostView.swift */; };
+		BBFDC9502B2ACFC700E87352 /* ReceivedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFDC94F2B2ACFC700E87352 /* ReceivedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,7 +77,6 @@
 		BB06038E2B26504C0095C864 /* ToDoListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItem.swift; sourceTree = "<group>"; };
 		BB0603902B26506A0095C864 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BB0603922B2650930095C864 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		BB0603942B26509E0095C864 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		BB0603962B2650A80095C864 /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
 		BB0603982B2650BE0095C864 /* NewItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewModel.swift; sourceTree = "<group>"; };
 		BB06039A2B2650CB0095C864 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -115,6 +117,10 @@
 		BBFDC93B2B2A77E900E87352 /* NProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NProfilePicture.swift; sourceTree = "<group>"; };
 		BBFDC9432B2A9EBD00E87352 /* NProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NProgressBar.swift; sourceTree = "<group>"; };
 		BBFDC9472B2AB56A00E87352 /* CreatePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewModel.swift; sourceTree = "<group>"; };
+		BBFDC9492B2ABC2E00E87352 /* NLoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLoadingScreen.swift; sourceTree = "<group>"; };
+		BBFDC94B2B2AC23C00E87352 /* NAttachmentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAttachmentPicker.swift; sourceTree = "<group>"; };
+		BBFDC94D2B2ACF4F00E87352 /* NPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPostView.swift; sourceTree = "<group>"; };
+		BBFDC94F2B2ACFC700E87352 /* ReceivedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceivedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,13 +152,13 @@
 			isa = PBXGroup;
 			children = (
 				BB0603922B2650930095C864 /* MainViewModel.swift */,
-				BB0603942B26509E0095C864 /* ProfileViewModel.swift */,
 				BB0603962B2650A80095C864 /* ToDoListViewModel.swift */,
 				BB0603982B2650BE0095C864 /* NewItemViewModel.swift */,
 				BB06039A2B2650CB0095C864 /* LoginViewModel.swift */,
 				BB06039C2B2650D60095C864 /* RegisterViewModel.swift */,
 				BB06039E2B2650E10095C864 /* ToDoListItemViewModel.swift */,
 				BBFDC9472B2AB56A00E87352 /* CreatePostViewModel.swift */,
+				BBFDC94F2B2ACFC700E87352 /* ReceivedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -208,6 +214,9 @@
 				BB6F45672B2990D0008D0CAC /* NSlider.swift */,
 				BBFDC93B2B2A77E900E87352 /* NProfilePicture.swift */,
 				BBFDC9432B2A9EBD00E87352 /* NProgressBar.swift */,
+				BBFDC9492B2ABC2E00E87352 /* NLoadingScreen.swift */,
+				BBFDC94B2B2AC23C00E87352 /* NAttachmentPicker.swift */,
+				BBFDC94D2B2ACF4F00E87352 /* NPostView.swift */,
 			);
 			path = "Supplementary Views";
 			sourceTree = "<group>";
@@ -371,18 +380,21 @@
 				BB06039D2B2650D60095C864 /* RegisterViewModel.swift in Sources */,
 				BB49B3F82B28216600077999 /* NTextCaption.swift in Sources */,
 				BBC2BEEF2B25485A00FC3F8C /* MainView.swift in Sources */,
+				BBFDC94E2B2ACF4F00E87352 /* NPostView.swift in Sources */,
 				BB6F45682B2990D0008D0CAC /* NSlider.swift in Sources */,
 				BB0603832B264FAA0095C864 /* ToDoListView.swift in Sources */,
 				BB0603A32B265A320095C864 /* NButton.swift in Sources */,
 				BBFDC9442B2A9EBD00E87352 /* NProgressBar.swift in Sources */,
 				BBFDC9342B2A1C0F00E87352 /* SettingsView.swift in Sources */,
 				BB06038D2B2650420095C864 /* User.swift in Sources */,
-				BB0603952B26509E0095C864 /* ProfileViewModel.swift in Sources */,
+				BBFDC94C2B2AC23C00E87352 /* NAttachmentPicker.swift in Sources */,
 				BBFDC9482B2AB56A00E87352 /* CreatePostViewModel.swift in Sources */,
 				BB49B3EF2B27F53A00077999 /* NSecureField.swift in Sources */,
 				BB0603892B264FF20095C864 /* RegisterView.swift in Sources */,
+				BBFDC9502B2ACFC700E87352 /* ReceivedViewModel.swift in Sources */,
 				BB06039F2B2650E10095C864 /* ToDoListItemViewModel.swift in Sources */,
 				BB49B3F52B281A9400077999 /* NPhotoPicker.swift in Sources */,
+				BBFDC94A2B2ABC2E00E87352 /* NLoadingScreen.swift in Sources */,
 				BB6F45662B298326008D0CAC /* NClassPicker.swift in Sources */,
 				BBFDC9362B2A1E1100E87352 /* CreatePostView.swift in Sources */,
 				BB6F455C2B292ED6008D0CAC /* NCourseRow.swift in Sources */,

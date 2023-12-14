@@ -5,14 +5,16 @@
 //  Created by Hans de los Santos on 12/13/23.
 //
 
+import FirebaseFirestoreSwift
 import SwiftUI
 
 struct ReceivedView: View {
+    @StateObject var viewModel = ReceivedViewModel()
+    @FirestoreQuery(collectionPath: "posts") var posts: [Post]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ForEach(posts) {
+            NPostView(post: $0)
+        }
     }
-}
-
-#Preview {
-    ReceivedView()
 }
