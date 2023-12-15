@@ -13,6 +13,7 @@ import FirebaseFirestore
 import FirebaseAuth
 
 @MainActor class CreatePostViewModel: ObservableObject {
+    @Published var user: User?
     @Published var authorID = ""
     @Published var postDate = Date()
     @Published var course = "Other"
@@ -85,8 +86,43 @@ import FirebaseAuth
         let collectionRef = db.collection("posts")
         do {
             try collectionRef.addDocument(from: post)
+            updateUser(postID: post.id)
         } catch {
             print(error)
+        }
+    }
+    
+    func updateUser(postID: String?) {
+        guard let userID = Auth.auth().currentUser?.uid else {
+            print("No current user detected")
+            return
+        }
+        let db = Firestore.firestore()
+        db.collection("users").document(userID).getDocument { [weak self] snapshot, error in
+            guard let data = snapshot?.data(), error == nil else {
+                print("error", error ?? "")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self?.user = User(
+                    id: data["id"] as? String ?? "",
+                    name: data["name"] as? String ?? "",
+                    email: data["email"] as? String ?? "",
+                    pfp: data["pfp"] as? String ?? "",
+                    OSIS: data["OSIS"] as? String ?? "",
+                    currentClasses: data["currentClasses"] as? [String] ?? [],
+                    tutorClasses: data["tutorClasses"] as? [String:[String:Double]] ?? [:],
+                    posts: data["posts"] as? [String] ?? [])
+                
+                if let user = self?.user, let postID = postID {
+                    var updatedUser = user
+                    updatedUser.appendPost(postID)
+                    db.collection("users")
+                        .document(user.id)
+                        .setData(user.asDictionary())
+                }
+            }
         }
     }
 }

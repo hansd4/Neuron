@@ -17,4 +17,12 @@ struct Post: Codable, Identifiable {
     let description: String
     let picture: String?
     let comments: [Comment]
+    
+    var xp: Int32 {
+        var count = 0
+        for comment in comments {
+            // get commenters' total XP, divide by comment count
+        }
+        return postDifficulty(postDate.timeIntervalSinceNow, Int32(comments.count), 0)
+    }
 }

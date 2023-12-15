@@ -43,7 +43,7 @@ struct ProfileView: View {
                     .padding()
                     .padding(.top, 20)
                 } else {
-                    NLoadingScreen()
+                    NLoadingScreen(title: "Loading profile...")
                 }
             }
         }

@@ -15,9 +15,24 @@ struct User: Codable {
     let OSIS: String
     let currentClasses: [String]
     let tutorClasses: [String:[String:Double]]
+    var posts: [String]
     
     var currentClassesWithOther: [String] {
         let newArray = ["Other"]
         return newArray + currentClasses.sorted()
+    }
+    
+    var totalXP: Int {
+        var xp = 0
+        for course in tutorClasses.keys {
+            if let courseXP = tutorClasses[course]?["xp"] {
+                xp += Int(courseXP)
+            }
+        }
+        return xp
+    }
+    
+    mutating func appendPost(_ post: String) {
+        posts.append(post)
     }
 }

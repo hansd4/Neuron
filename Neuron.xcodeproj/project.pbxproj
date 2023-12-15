@@ -37,6 +37,8 @@
 		BB49B3F52B281A9400077999 /* NPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3F42B281A9400077999 /* NPhotoPicker.swift */; };
 		BB49B3F82B28216600077999 /* NTextCaption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3F72B28216600077999 /* NTextCaption.swift */; };
 		BB5454A42B2B347100766B16 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5454A32B2B347100766B16 /* PostView.swift */; };
+		BB5454A62B2BE67500766B16 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5454A52B2BE67500766B16 /* PostViewModel.swift */; };
+		BB5454AA2B2C095000766B16 /* getDifficulty.c in Sources */ = {isa = PBXBuildFile; fileRef = BB5454A92B2C095000766B16 /* getDifficulty.c */; };
 		BB6F45562B2926AD008D0CAC /* NCategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45552B2926AD008D0CAC /* NCategoryRow.swift */; };
 		BB6F45582B2927D5008D0CAC /* ClassCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45572B2927D5008D0CAC /* ClassCategory.swift */; };
 		BB6F455A2B2929F2008D0CAC /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6F45592B2929F2008D0CAC /* Course.swift */; };
@@ -95,6 +97,10 @@
 		BB49B3F42B281A9400077999 /* NPhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPhotoPicker.swift; sourceTree = "<group>"; };
 		BB49B3F72B28216600077999 /* NTextCaption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTextCaption.swift; sourceTree = "<group>"; };
 		BB5454A32B2B347100766B16 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		BB5454A52B2BE67500766B16 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		BB5454A72B2C094F00766B16 /* Neuron-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Neuron-Bridging-Header.h"; sourceTree = "<group>"; };
+		BB5454A82B2C095000766B16 /* getDifficulty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = getDifficulty.h; sourceTree = "<group>"; };
+		BB5454A92B2C095000766B16 /* getDifficulty.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = getDifficulty.c; sourceTree = "<group>"; };
 		BB6F45552B2926AD008D0CAC /* NCategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCategoryRow.swift; sourceTree = "<group>"; };
 		BB6F45572B2927D5008D0CAC /* ClassCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCategory.swift; sourceTree = "<group>"; };
 		BB6F45592B2929F2008D0CAC /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
@@ -161,6 +167,7 @@
 				BB06039E2B2650E10095C864 /* ToDoListItemViewModel.swift */,
 				BBFDC9472B2AB56A00E87352 /* CreatePostViewModel.swift */,
 				BBFDC94F2B2ACFC700E87352 /* ReceivedViewModel.swift */,
+				BB5454A52B2BE67500766B16 /* PostViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -229,11 +236,14 @@
 			children = (
 				BBC2BEF02B25485B00FC3F8C /* Assets.xcassets */,
 				BBC2BF002B25899A00FC3F8C /* Info.plist */,
+				BB5454A82B2C095000766B16 /* getDifficulty.h */,
+				BB5454A92B2C095000766B16 /* getDifficulty.c */,
 				BB0603462B2649C30095C864 /* GoogleService-Info.plist */,
 				BBC2BEEC2B25485A00FC3F8C /* NeuronApp.swift */,
 				BBDE5E8F2B2829BE001E1248 /* Classes.swift */,
 				BB0603A42B26667A0095C864 /* Extensions.swift */,
 				BBC2BEFF2B2587DC00FC3F8C /* Fonts */,
+				BB5454A72B2C094F00766B16 /* Neuron-Bridging-Header.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -329,6 +339,7 @@
 				TargetAttributes = {
 					BBC2BEE82B25485A00FC3F8C = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -373,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5454A62B2BE67500766B16 /* PostViewModel.swift in Sources */,
 				BB0603DE2B27045B0095C864 /* PersonalInfoView.swift in Sources */,
 				BB0603E02B27046A0095C864 /* ProfilePictureView.swift in Sources */,
 				BB0603852B264FCF0095C864 /* NewItemView.swift in Sources */,
@@ -389,6 +401,7 @@
 				BB0603832B264FAA0095C864 /* ToDoListView.swift in Sources */,
 				BB0603A32B265A320095C864 /* NButton.swift in Sources */,
 				BBFDC9442B2A9EBD00E87352 /* NProgressBar.swift in Sources */,
+				BB5454AA2B2C095000766B16 /* getDifficulty.c in Sources */,
 				BBFDC9342B2A1C0F00E87352 /* SettingsView.swift in Sources */,
 				BB06038D2B2650420095C864 /* User.swift in Sources */,
 				BBFDC94C2B2AC23C00E87352 /* NAttachmentPicker.swift in Sources */,
@@ -549,6 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Neuron/Preview Content\"";
@@ -569,6 +583,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.delosSantos.Hans.Neuron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Neuron/Other/Neuron-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -579,6 +595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Neuron/Preview Content\"";
@@ -599,6 +616,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.delosSantos.Hans.Neuron;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Neuron/Other/Neuron-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

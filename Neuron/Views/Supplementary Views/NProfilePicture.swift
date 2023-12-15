@@ -9,19 +9,42 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct NProfilePicture: View {
-    let url: String
+    let url: String?
     let size: Int
+    let strokeSize: Int
+    
+    init(url: String?, size: Int, strokeSize: Int = 2) {
+        self.url = url
+        self.size = size
+        self.strokeSize = strokeSize
+    }
     
     var body: some View {
-        WebImage(url: URL(string: url))
-            .resizable()
-            .scaledToFill()
-            .frame(width: CGFloat(size), height: CGFloat(size))
-            .clipped()
-            .clipShape(Circle())
-            .overlay(Circle()
-                .stroke(Color(.appGray), lineWidth: 2))
-            .shadow(radius: 2)
-            .padding()
+        if let url = url {
+            WebImage(url: URL(string: url))
+                .resizable()
+                .scaledToFill()
+                .frame(width: CGFloat(size), height: CGFloat(size))
+                .clipped()
+                .clipShape(Circle())
+                .overlay(Circle()
+                    .stroke(Color(.appGray), lineWidth: CGFloat(strokeSize)))
+                .shadow(radius: CGFloat(strokeSize))
+                .padding()
+                .onAppear {
+                    print("Profile picture here! Rendering URL \(url)")
+                }
+        } else {
+            Image("default")
+                .resizable()
+                .scaledToFill()
+                .frame(width: CGFloat(size), height: CGFloat(size))
+                .clipped()
+                .clipShape(Circle())
+                .overlay(Circle()
+                    .stroke(Color(.appGray), lineWidth: CGFloat(strokeSize)))
+                .shadow(radius: CGFloat(strokeSize))
+                .padding()
+        }
     }
 }

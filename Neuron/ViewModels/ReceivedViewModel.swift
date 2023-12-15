@@ -10,7 +10,19 @@ import FirebaseFirestore
 
 class ReceivedViewModel: ObservableObject {
     @Published var posts: [Post] = []
-    @Published var postsByClass: [String: [Post]] = [:]
+    var postsByClass: [String: [Post]] {
+        refreshPosts()
+        var newDict: [String: [Post]] = [:]
+        for post in posts {
+            if newDict[post.course] != nil {
+                newDict[post.course]!.append(post)
+            } else {
+                newDict[post.course] = [Post]()
+                newDict[post.course]!.append(post)
+            }
+        }
+        return newDict
+    }
     
     init() {}
     
@@ -25,28 +37,6 @@ class ReceivedViewModel: ObservableObject {
                 }
                 self?.posts = newPosts
             }
-        }
-    }
-    
-    func updatePostsByClass() {
-        refreshPosts()
-        
-        postsByClass.removeAll()
-        for post in posts {
-            if postsByClass[post.course] != nil {
-                postsByClass[post.course]!.append(post)
-            } else {
-                postsByClass[post.course] = [Post]()
-                postsByClass[post.course]!.append(post)
-            }
-        }
-        
-        for course in Array(postsByClass.keys) {
-            print(course)
-            for post in postsByClass[course]! {
-                print("\t\(post.title)")
-            }
-            print()
         }
     }
 }

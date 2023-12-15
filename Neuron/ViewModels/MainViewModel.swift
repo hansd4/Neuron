@@ -48,7 +48,8 @@ class MainViewModel: ObservableObject {
                     pfp: data["pfp"] as? String ?? "",
                     OSIS: data["OSIS"] as? String ?? "",
                     currentClasses: data["currentClasses"] as? [String] ?? [],
-                    tutorClasses: data["tutorClasses"] as? [String:[String:Double]] ?? [:])
+                    tutorClasses: data["tutorClasses"] as? [String:[String:Double]] ?? [:],
+                    posts: data["posts"] as? [String] ?? [])
             }
         }
     }

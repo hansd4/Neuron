@@ -38,7 +38,7 @@ struct SettingsView: View {
                     }
                     .padding(.bottom, 35)
                 } else {
-                    NLoadingScreen()
+                    NLoadingScreen(title: "Loading...")
                 }
             }
         }

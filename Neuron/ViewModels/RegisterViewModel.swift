@@ -94,7 +94,8 @@ import PhotosUI
                            pfp: pfp,
                            OSIS: OSIS,
                            currentClasses: currentClasses,
-                           tutorClasses: tutorClasses)
+                           tutorClasses: tutorClasses,
+                           posts: [])
         
         let db = Firestore.firestore()
         

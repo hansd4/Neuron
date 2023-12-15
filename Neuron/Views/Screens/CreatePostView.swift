@@ -14,34 +14,54 @@ struct CreatePostView: View {
     @StateObject var viewModel = CreatePostViewModel()
     
     var body: some View {
-        Form {
+        VStack {
             if let user = mainViewModel.user  {
-                Picker("What course do you need help with?", selection: $viewModel.course) {
-                    ForEach(user.currentClassesWithOther, id: \.self) {
-                        Text($0)
-                    }
-                }
-                .pickerStyle(.wheel)
-                
-                TextField("Title", text: $viewModel.title)
-                
-                TextEditor(text: $viewModel.description)
-                
-                NAttachmentPicker(title: "Add a photo (if applicable)", selection: $viewModel.pickerPicture, image: $viewModel.pictureImage)
-                
-                NButton(title: "Post", background: Color(.appBlue)) {
-                    if let uid = mainViewModel.user?.id {
-                        viewModel.authorID = uid
-                        print("Fetched user: \(uid)")
-                    } else {
-                        print("Could not fetch user")
-                    }
+                ZStack {
+                    Color(.appDarkBlue)
+                        .ignoresSafeArea()
                     
-                    viewModel.post()
-                    mainViewModel.tabSelection = 0
+                    HStack {
+                        NProfilePicture(url: user.pfp, size: 50, strokeSize: 0)
+                        Spacer()
+                        Text("\(user.totalXP) XP")
+                            .font(Font.custom("Maven Pro", size: 24).weight(.medium))
+                    }
+                    .padding(.trailing)
+                    .offset(y: 10)
+                }
+                .foregroundStyle(Color(.appOffWhite))
+                .frame(maxWidth: .infinity, maxHeight: 70)
+                .offset(y: -10)
+                .shadow(radius: 10)
+                
+                Form {
+                    Picker("What course do you need help with?", selection: $viewModel.course) {
+                        ForEach(user.currentClassesWithOther, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                    
+                    TextField("Title", text: $viewModel.title)
+                    
+                    TextEditor(text: $viewModel.description)
+                    
+                    NAttachmentPicker(title: "Add a photo (if applicable)", selection: $viewModel.pickerPicture, image: $viewModel.pictureImage)
+                    
+                    NButton(title: "Post", background: Color(.appBlue)) {
+                        if let uid = mainViewModel.user?.id {
+                            viewModel.authorID = uid
+                            print("Fetched user: \(uid)")
+                        } else {
+                            print("Could not fetch user")
+                        }
+                        
+                        viewModel.post()
+                        mainViewModel.tabSelection = 0
+                    }
                 }
             } else {
-                NLoadingScreen()
+                NLoadingScreen(title: "Loading...")
             }
         }
         .font(Font.custom("Maven Pro", size: 18))

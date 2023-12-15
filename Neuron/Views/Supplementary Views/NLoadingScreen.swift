@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct NLoadingScreen: View {
+    let title: String
+    
     var body: some View {
         Group {
-            Text("Loading profile...")
+            Text(title)
             ProgressView()
         }
         .font(Font.custom("Maven Pro", size: 18))
@@ -18,5 +20,5 @@ struct NLoadingScreen: View {
 }
 
 #Preview {
-    NLoadingScreen()
+    NLoadingScreen(title: "Loading profile...")
 }

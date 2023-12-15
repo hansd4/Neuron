@@ -13,23 +13,55 @@ struct ReceivedView: View {
     
     var body: some View {
         NavigationView {
-            ForEach(Array(viewModel.postsByClass.keys).sorted(), id: \.self) { course in
-                Section {
-                    List(viewModel.postsByClass[course]!) { post in
-                        NavigationLink(destination: PostView(post: post)) {
-                            NPostView(post: post)
+            VStack {
+                if let user = mainViewModel.user {
+                    ZStack {
+                        Color(.appDarkBlue)
+                            .ignoresSafeArea()
+                        
+                        HStack {
+                            NProfilePicture(url: user.pfp, size: 50, strokeSize: 0)
+                            Spacer()
+                            Text("\(user.totalXP) XP")
+                                .font(Font.custom("Maven Pro", size: 24).weight(.medium))
+                        }
+                        .padding(.trailing)
+                        .offset(y: 10)
+                    }
+                    .foregroundStyle(Color(.appOffWhite))
+                    .frame(maxWidth: .infinity, maxHeight: 20)
+                    .shadow(radius: 10)
+                                        
+                    ScrollView(.vertical) {
+                        LazyVStack(alignment: .leading) {
+                            ForEach(Array(viewModel.postsByClass.keys).sorted(), id: \.self) { course in
+                                if user.tutorClasses.keys.contains(course) {
+                                    Section {
+                                        ForEach(viewModel.postsByClass[course]!) { post in
+                                            NavigationLink(destination: PostView(post: post).environmentObject(mainViewModel)) {
+                                                NPostView(post: post)
+                                            }
+                                            .tint(.primary)
+                                        }
+                                    } header: {
+                                        Text(course)
+                                            .font(Font.custom("Maven Pro", size: 18))
+                                            .opacity(0.5)
+                                            .padding(.top, 5)
+                                    }
+                                }
+                            }
                         }
                     }
-                } header: {
-                    Text(course)
-                        .font(Font.custom("Maven Pro", size: 18))
-                        .opacity(0.5)
+                    .padding()
+                    .padding(.top, 20)
+                } else {
+                    NLoadingScreen(title: "Loading profile...")
                 }
             }
-            .onAppear {
-                viewModel.updatePostsByClass()
-                print(viewModel.postsByClass)
-            }
+        }
+        .onAppear {
+            mainViewModel.fetchUser()
         }
     }
 }

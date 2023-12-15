@@ -10,17 +10,26 @@ import SwiftUI
 struct NPostView: View {
     let post: Post
     
-    // TODO: get author from database
-    
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(post.title)
+        HStack {
+            VStack(alignment: .leading) {
+                Text(post.title)
+                    .font(Font.custom("Maven Pro", size: 20).bold())
+                Text(post.description)
+                    .font(Font.custom("Maven Pro", size: 12))
+                    .opacity(0.5)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+            }
+            .font(Font.custom("Maven Pro", size: 16))
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.bottom, 5)
+            .padding(.trailing, 15)
+            
+            Text("+\(post.xp)")
                 .font(Font.custom("Maven Pro", size: 20).bold())
-            Text(post.description)
-                .font(Font.custom("Maven Pro", size: 12))
-                .opacity(0.5)
-                .truncationMode(.tail)
+            Image(systemName: "chevron.right")
+                .foregroundStyle(Color(.appGray))
         }
-        .font(Font.custom("Maven Pro", size: 16))
     }
 }
