@@ -8,20 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BB0603472B2649C30095C864 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB0603462B2649C30095C864 /* GoogleService-Info.plist */; };
-		BB0603832B264FAA0095C864 /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603822B264FA90095C864 /* ToDoListView.swift */; };
 		BB0603852B264FCF0095C864 /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603842B264FCF0095C864 /* NewItemView.swift */; };
 		BB0603872B264FE10095C864 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603862B264FE10095C864 /* LoginView.swift */; };
 		BB0603892B264FF20095C864 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603882B264FF20095C864 /* RegisterView.swift */; };
-		BB06038B2B26500B0095C864 /* ToDoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06038A2B26500B0095C864 /* ToDoListItemView.swift */; };
 		BB06038D2B2650420095C864 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06038C2B2650420095C864 /* User.swift */; };
-		BB06038F2B26504C0095C864 /* ToDoListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06038E2B26504C0095C864 /* ToDoListItem.swift */; };
 		BB0603912B26506A0095C864 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603902B26506A0095C864 /* ProfileView.swift */; };
 		BB0603932B2650930095C864 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603922B2650930095C864 /* MainViewModel.swift */; };
-		BB0603972B2650A80095C864 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603962B2650A80095C864 /* ToDoListViewModel.swift */; };
-		BB0603992B2650BE0095C864 /* NewItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603982B2650BE0095C864 /* NewItemViewModel.swift */; };
 		BB06039B2B2650CB0095C864 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06039A2B2650CB0095C864 /* LoginViewModel.swift */; };
 		BB06039D2B2650D60095C864 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06039C2B2650D60095C864 /* RegisterViewModel.swift */; };
-		BB06039F2B2650E10095C864 /* ToDoListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06039E2B2650E10095C864 /* ToDoListItemViewModel.swift */; };
 		BB0603A32B265A320095C864 /* NButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603A22B265A320095C864 /* NButton.swift */; };
 		BB0603A52B26667A0095C864 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603A42B26667A0095C864 /* Extensions.swift */; };
 		BB0603B42B26B9780095C864 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BB0603B32B26B9780095C864 /* FirebaseAuth */; };
@@ -71,20 +65,14 @@
 
 /* Begin PBXFileReference section */
 		BB0603462B2649C30095C864 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BB0603822B264FA90095C864 /* ToDoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		BB0603842B264FCF0095C864 /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
 		BB0603862B264FE10095C864 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BB0603882B264FF20095C864 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		BB06038A2B26500B0095C864 /* ToDoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemView.swift; sourceTree = "<group>"; };
 		BB06038C2B2650420095C864 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		BB06038E2B26504C0095C864 /* ToDoListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItem.swift; sourceTree = "<group>"; };
 		BB0603902B26506A0095C864 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		BB0603922B2650930095C864 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		BB0603962B2650A80095C864 /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
-		BB0603982B2650BE0095C864 /* NewItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewModel.swift; sourceTree = "<group>"; };
 		BB06039A2B2650CB0095C864 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		BB06039C2B2650D60095C864 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
-		BB06039E2B2650E10095C864 /* ToDoListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListItemViewModel.swift; sourceTree = "<group>"; };
 		BB0603A22B265A320095C864 /* NButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NButton.swift; sourceTree = "<group>"; };
 		BB0603A42B26667A0095C864 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BB0603DD2B27045B0095C864 /* PersonalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoView.swift; sourceTree = "<group>"; };
@@ -160,11 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				BB0603922B2650930095C864 /* MainViewModel.swift */,
-				BB0603962B2650A80095C864 /* ToDoListViewModel.swift */,
-				BB0603982B2650BE0095C864 /* NewItemViewModel.swift */,
 				BB06039A2B2650CB0095C864 /* LoginViewModel.swift */,
 				BB06039C2B2650D60095C864 /* RegisterViewModel.swift */,
-				BB06039E2B2650E10095C864 /* ToDoListItemViewModel.swift */,
 				BBFDC9472B2AB56A00E87352 /* CreatePostViewModel.swift */,
 				BBFDC94F2B2ACFC700E87352 /* ReceivedViewModel.swift */,
 				BB5454A52B2BE67500766B16 /* PostViewModel.swift */,
@@ -176,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				BB06038C2B2650420095C864 /* User.swift */,
-				BB06038E2B26504C0095C864 /* ToDoListItem.swift */,
 				BB6F45572B2927D5008D0CAC /* ClassCategory.swift */,
 				BB6F45592B2929F2008D0CAC /* Course.swift */,
 				BBFDC9372B2A1F1000E87352 /* Post.swift */,
@@ -190,11 +174,9 @@
 			children = (
 				BBC2BEEE2B25485A00FC3F8C /* MainView.swift */,
 				BB0603902B26506A0095C864 /* ProfileView.swift */,
-				BB0603822B264FA90095C864 /* ToDoListView.swift */,
 				BB0603842B264FCF0095C864 /* NewItemView.swift */,
 				BB0603862B264FE10095C864 /* LoginView.swift */,
 				BB0603882B264FF20095C864 /* RegisterView.swift */,
-				BB06038A2B26500B0095C864 /* ToDoListItemView.swift */,
 				BB49B3E82B27436800077999 /* EmailView.swift */,
 				BB0603DD2B27045B0095C864 /* PersonalInfoView.swift */,
 				BB0603DF2B27046A0095C864 /* ProfilePictureView.swift */,
@@ -389,7 +371,6 @@
 				BB0603E02B27046A0095C864 /* ProfilePictureView.swift in Sources */,
 				BB0603852B264FCF0095C864 /* NewItemView.swift in Sources */,
 				BBFDC9382B2A1F1000E87352 /* Post.swift in Sources */,
-				BB06038B2B26500B0095C864 /* ToDoListItemView.swift in Sources */,
 				BB6F45642B2982BC008D0CAC /* TutorPreferencesView.swift in Sources */,
 				BB0603912B26506A0095C864 /* ProfileView.swift in Sources */,
 				BB5454A42B2B347100766B16 /* PostView.swift in Sources */,
@@ -398,7 +379,6 @@
 				BBC2BEEF2B25485A00FC3F8C /* MainView.swift in Sources */,
 				BBFDC94E2B2ACF4F00E87352 /* NPostView.swift in Sources */,
 				BB6F45682B2990D0008D0CAC /* NSlider.swift in Sources */,
-				BB0603832B264FAA0095C864 /* ToDoListView.swift in Sources */,
 				BB0603A32B265A320095C864 /* NButton.swift in Sources */,
 				BBFDC9442B2A9EBD00E87352 /* NProgressBar.swift in Sources */,
 				BB5454AA2B2C095000766B16 /* getDifficulty.c in Sources */,
@@ -409,7 +389,6 @@
 				BB49B3EF2B27F53A00077999 /* NSecureField.swift in Sources */,
 				BB0603892B264FF20095C864 /* RegisterView.swift in Sources */,
 				BBFDC9502B2ACFC700E87352 /* ReceivedViewModel.swift in Sources */,
-				BB06039F2B2650E10095C864 /* ToDoListItemViewModel.swift in Sources */,
 				BB49B3F52B281A9400077999 /* NPhotoPicker.swift in Sources */,
 				BBFDC94A2B2ABC2E00E87352 /* NLoadingScreen.swift in Sources */,
 				BB6F45662B298326008D0CAC /* NClassPicker.swift in Sources */,
@@ -417,7 +396,6 @@
 				BB6F455C2B292ED6008D0CAC /* NCourseRow.swift in Sources */,
 				BBDE5E902B2829BE001E1248 /* Classes.swift in Sources */,
 				BB06039B2B2650CB0095C864 /* LoginViewModel.swift in Sources */,
-				BB0603992B2650BE0095C864 /* NewItemViewModel.swift in Sources */,
 				BBFDC9322B2A1A2200E87352 /* ReceivedView.swift in Sources */,
 				BB49B3ED2B27E68400077999 /* NTextField.swift in Sources */,
 				BB0603E22B2704750095C864 /* CurrentClassesView.swift in Sources */,
@@ -428,8 +406,6 @@
 				BB6F455A2B2929F2008D0CAC /* Course.swift in Sources */,
 				BB6F45562B2926AD008D0CAC /* NCategoryRow.swift in Sources */,
 				BBC2BEED2B25485A00FC3F8C /* NeuronApp.swift in Sources */,
-				BB0603972B2650A80095C864 /* ToDoListViewModel.swift in Sources */,
-				BB06038F2B26504C0095C864 /* ToDoListItem.swift in Sources */,
 				BBFDC93C2B2A77E900E87352 /* NProfilePicture.swift in Sources */,
 				BB0603E42B27048F0095C864 /* TutorClassesView.swift in Sources */,
 				BB0603932B2650930095C864 /* MainViewModel.swift in Sources */,
