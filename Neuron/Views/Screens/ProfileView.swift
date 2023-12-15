@@ -20,6 +20,7 @@ struct ProfileView: View {
                         
                         HStack {
                             NProfilePicture(url: user.pfp, size: 90)
+                                .padding()
                             VStack(alignment: .leading) {
                                 Text(user.name)
                                     .font(Font.custom("Maven Pro", size: 24).bold())

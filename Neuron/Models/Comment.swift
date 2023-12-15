@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct Comment: Codable, Hashable {
+struct Comment: Codable, Hashable, Identifiable {
+    let id = UUID()
     let authorID: String
-    let postDate: TimeInterval
+    let postDate: Date
     let text: String
-    let picture: String?
+    let replies: [Comment]
 }

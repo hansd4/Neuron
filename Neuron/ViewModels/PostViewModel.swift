@@ -6,11 +6,65 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 class PostViewModel: ObservableObject {
-    // @Published var comments: [Comment] = []
+    @Published var postUser: User? = nil
+    @Published var commentUsers: [String:User] = [:]
+    let post: Post
     
-    init() {}
+    @Published var addingComment: Bool = false
+    @Published var commentField: String = ""
     
+    init(post: Post) {
+        self.post = post
+    }
     
+    func fetchUser() {
+        let db = Firestore.firestore()
+        db.collection("users").document(post.authorID).getDocument { [weak self] snapshot, error in
+            guard let data = snapshot?.data(), error == nil else {
+                print("error", error ?? "")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self?.postUser = User(
+                    id: data["id"] as? String ?? "",
+                    name: data["name"] as? String ?? "",
+                    email: data["email"] as? String ?? "",
+                    pfp: data["pfp"] as? String ?? "",
+                    OSIS: data["OSIS"] as? String ?? "",
+                    currentClasses: data["currentClasses"] as? [String] ?? [],
+                    tutorClasses: data["tutorClasses"] as? [String:[String:Double]] ?? [:],
+                    posts: data["posts"] as? [String] ?? [])
+            }
+        }
+    }
+    
+    func fetchCommenter(id: String) {
+        let db = Firestore.firestore()
+        db.collection("users").document(id).getDocument { [weak self] snapshot, error in
+            guard let data = snapshot?.data(), error == nil else {
+                print("error", error ?? "")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self?.commentUsers[id] = User(
+                    id: data["id"] as? String ?? "",
+                    name: data["name"] as? String ?? "",
+                    email: data["email"] as? String ?? "",
+                    pfp: data["pfp"] as? String ?? "",
+                    OSIS: data["OSIS"] as? String ?? "",
+                    currentClasses: data["currentClasses"] as? [String] ?? [],
+                    tutorClasses: data["tutorClasses"] as? [String:[String:Double]] ?? [:],
+                    posts: data["posts"] as? [String] ?? [])
+            }
+        }
+    }
+    
+    func postComment() {
+        // TODO: use db.collection("u as reference
+    }
 }

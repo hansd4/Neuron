@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BB0603472B2649C30095C864 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB0603462B2649C30095C864 /* GoogleService-Info.plist */; };
-		BB0603852B264FCF0095C864 /* NewItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603842B264FCF0095C864 /* NewItemView.swift */; };
 		BB0603872B264FE10095C864 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603862B264FE10095C864 /* LoginView.swift */; };
 		BB0603892B264FF20095C864 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603882B264FF20095C864 /* RegisterView.swift */; };
 		BB06038D2B2650420095C864 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06038C2B2650420095C864 /* User.swift */; };
@@ -25,6 +24,8 @@
 		BB0603E02B27046A0095C864 /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603DF2B27046A0095C864 /* ProfilePictureView.swift */; };
 		BB0603E22B2704750095C864 /* CurrentClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603E12B2704750095C864 /* CurrentClassesView.swift */; };
 		BB0603E42B27048F0095C864 /* TutorClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603E32B27048F0095C864 /* TutorClassesView.swift */; };
+		BB2EB5202B2CBA34004EBED8 /* NCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EB51F2B2CBA34004EBED8 /* NCommentView.swift */; };
+		BB2EB5222B2CC191004EBED8 /* AddingCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EB5212B2CC191004EBED8 /* AddingCommentView.swift */; };
 		BB49B3E92B27436800077999 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3E82B27436800077999 /* EmailView.swift */; };
 		BB49B3ED2B27E68400077999 /* NTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3EC2B27E68400077999 /* NTextField.swift */; };
 		BB49B3EF2B27F53A00077999 /* NSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3EE2B27F53A00077999 /* NSecureField.swift */; };
@@ -65,7 +66,6 @@
 
 /* Begin PBXFileReference section */
 		BB0603462B2649C30095C864 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BB0603842B264FCF0095C864 /* NewItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemView.swift; sourceTree = "<group>"; };
 		BB0603862B264FE10095C864 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BB0603882B264FF20095C864 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		BB06038C2B2650420095C864 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -79,6 +79,8 @@
 		BB0603DF2B27046A0095C864 /* ProfilePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
 		BB0603E12B2704750095C864 /* CurrentClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentClassesView.swift; sourceTree = "<group>"; };
 		BB0603E32B27048F0095C864 /* TutorClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorClassesView.swift; sourceTree = "<group>"; };
+		BB2EB51F2B2CBA34004EBED8 /* NCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCommentView.swift; sourceTree = "<group>"; };
+		BB2EB5212B2CC191004EBED8 /* AddingCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingCommentView.swift; sourceTree = "<group>"; };
 		BB49B3E82B27436800077999 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		BB49B3EC2B27E68400077999 /* NTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTextField.swift; sourceTree = "<group>"; };
 		BB49B3EE2B27F53A00077999 /* NSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSecureField.swift; sourceTree = "<group>"; };
@@ -174,7 +176,6 @@
 			children = (
 				BBC2BEEE2B25485A00FC3F8C /* MainView.swift */,
 				BB0603902B26506A0095C864 /* ProfileView.swift */,
-				BB0603842B264FCF0095C864 /* NewItemView.swift */,
 				BB0603862B264FE10095C864 /* LoginView.swift */,
 				BB0603882B264FF20095C864 /* RegisterView.swift */,
 				BB49B3E82B27436800077999 /* EmailView.swift */,
@@ -188,6 +189,7 @@
 				BBFDC9332B2A1C0F00E87352 /* SettingsView.swift */,
 				BBFDC9352B2A1E1100E87352 /* CreatePostView.swift */,
 				BB5454A32B2B347100766B16 /* PostView.swift */,
+				BB2EB5212B2CC191004EBED8 /* AddingCommentView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -209,6 +211,7 @@
 				BBFDC9492B2ABC2E00E87352 /* NLoadingScreen.swift */,
 				BBFDC94B2B2AC23C00E87352 /* NAttachmentPicker.swift */,
 				BBFDC94D2B2ACF4F00E87352 /* NPostView.swift */,
+				BB2EB51F2B2CBA34004EBED8 /* NCommentView.swift */,
 			);
 			path = "Supplementary Views";
 			sourceTree = "<group>";
@@ -369,7 +372,6 @@
 				BB5454A62B2BE67500766B16 /* PostViewModel.swift in Sources */,
 				BB0603DE2B27045B0095C864 /* PersonalInfoView.swift in Sources */,
 				BB0603E02B27046A0095C864 /* ProfilePictureView.swift in Sources */,
-				BB0603852B264FCF0095C864 /* NewItemView.swift in Sources */,
 				BBFDC9382B2A1F1000E87352 /* Post.swift in Sources */,
 				BB6F45642B2982BC008D0CAC /* TutorPreferencesView.swift in Sources */,
 				BB0603912B26506A0095C864 /* ProfileView.swift in Sources */,
@@ -388,6 +390,7 @@
 				BBFDC9482B2AB56A00E87352 /* CreatePostViewModel.swift in Sources */,
 				BB49B3EF2B27F53A00077999 /* NSecureField.swift in Sources */,
 				BB0603892B264FF20095C864 /* RegisterView.swift in Sources */,
+				BB2EB5222B2CC191004EBED8 /* AddingCommentView.swift in Sources */,
 				BBFDC9502B2ACFC700E87352 /* ReceivedViewModel.swift in Sources */,
 				BB49B3F52B281A9400077999 /* NPhotoPicker.swift in Sources */,
 				BBFDC94A2B2ABC2E00E87352 /* NLoadingScreen.swift in Sources */,
@@ -403,6 +406,7 @@
 				BB0603A52B26667A0095C864 /* Extensions.swift in Sources */,
 				BBFDC93A2B2A20C600E87352 /* Comment.swift in Sources */,
 				BB6F45582B2927D5008D0CAC /* ClassCategory.swift in Sources */,
+				BB2EB5202B2CBA34004EBED8 /* NCommentView.swift in Sources */,
 				BB6F455A2B2929F2008D0CAC /* Course.swift in Sources */,
 				BB6F45562B2926AD008D0CAC /* NCategoryRow.swift in Sources */,
 				BBC2BEED2B25485A00FC3F8C /* NeuronApp.swift in Sources */,

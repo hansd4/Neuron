@@ -30,7 +30,6 @@ struct NProfilePicture: View {
                 .overlay(Circle()
                     .stroke(Color(.appGray), lineWidth: CGFloat(strokeSize)))
                 .shadow(radius: CGFloat(strokeSize))
-                .padding()
                 .onAppear {
                     print("Profile picture here! Rendering URL \(url)")
                 }
@@ -44,7 +43,6 @@ struct NProfilePicture: View {
                 .overlay(Circle()
                     .stroke(Color(.appGray), lineWidth: CGFloat(strokeSize)))
                 .shadow(radius: CGFloat(strokeSize))
-                .padding()
         }
     }
 }

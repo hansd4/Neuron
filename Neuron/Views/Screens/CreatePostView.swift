@@ -22,6 +22,7 @@ struct CreatePostView: View {
                     
                     HStack {
                         NProfilePicture(url: user.pfp, size: 50, strokeSize: 0)
+                            .padding()
                         Spacer()
                         Text("\(user.totalXP) XP")
                             .font(Font.custom("Maven Pro", size: 24).weight(.medium))

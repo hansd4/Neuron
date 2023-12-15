@@ -25,11 +25,7 @@ import FirebaseAuth
     @Published var pickerPicture: PhotosPickerItem? {
         didSet {
             Task {
-                guard let item = pickerPicture else { return }
-                guard let imageData = try await item.loadTransferable(type: Data.self) else { return }
-                guard let uiImage = UIImage(data: imageData) else { return }
-                self.picData = Data()
-                self.pictureImage = Image(uiImage: uiImage)
+                try await loadImage()
             }
         }
     }
@@ -51,6 +47,7 @@ import FirebaseAuth
             self.sendPostToFirebase(url: nil)
             return
         }
+
         ref.putData(data, metadata: nil) { [weak self] _, err in
             if let err = err {
                 print(err)
@@ -124,5 +121,13 @@ import FirebaseAuth
                 }
             }
         }
+    }
+    
+    func loadImage() async throws {
+        guard let item = pickerPicture else { return }
+        guard let imageData = try await item.loadTransferable(type: Data.self) else { return }
+        guard let uiImage = UIImage(data: imageData) else { return }
+        self.picData = imageData
+        self.pictureImage = Image(uiImage: uiImage)
     }
 }

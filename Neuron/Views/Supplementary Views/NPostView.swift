@@ -15,6 +15,8 @@ struct NPostView: View {
             VStack(alignment: .leading) {
                 Text(post.title)
                     .font(Font.custom("Maven Pro", size: 20).bold())
+                    .lineLimit(1)
+                    .truncationMode(.tail)
                 Text(post.description)
                     .font(Font.custom("Maven Pro", size: 12))
                     .opacity(0.5)
