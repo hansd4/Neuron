@@ -17,14 +17,11 @@ struct Post: Codable, Identifiable {
     let title: String
     let description: String
     let picture: String?
-    let comments: [Comment]
+    var comments: [Comment]
+    var resolved: Bool
     
     var xp: Int32 {
-        var count = 0
-        for comment in comments {
-            // get commenters' total XP, divide by comment count
-        }
-        return postDifficulty(postDate.timeIntervalSinceNow, Int32(comments.count), 0)
+        return postDifficulty(postDate.timeIntervalSinceNow, Int32(comments.count), 5)
     }
     
     var xpColor: Color {
@@ -38,5 +35,13 @@ struct Post: Codable, Identifiable {
         default:
             return .primary
         }
+    }
+    
+    mutating func addComment(_ comment: Comment) {
+        comments.append(comment)
+    }
+    
+    mutating func findSolution() {
+        resolved = true
     }
 }

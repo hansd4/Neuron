@@ -31,7 +31,7 @@ struct NProfilePicture: View {
                     .stroke(Color(.appGray), lineWidth: CGFloat(strokeSize)))
                 .shadow(radius: CGFloat(strokeSize))
                 .onAppear {
-                    print("Profile picture here! Rendering URL \(url)")
+                    // print("Profile picture here! Rendering URL \(url)")
                 }
         } else {
             Image("default")

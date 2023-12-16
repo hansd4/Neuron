@@ -75,10 +75,9 @@ struct PostView: View {
                             Text(post.description)
                                 .font(Font.custom("Maven Pro", size: 16))
                             
-                            HStack {
+                            HStack(alignment: .center) {
                                 Text("\(post.comments.count) Comments")
                                     .font(Font.custom("Maven Pro", size: 20))
-                                    .padding(.top)
                                 Button {
                                     viewModel.addingComment = true
                                 } label: {
@@ -87,14 +86,25 @@ struct PostView: View {
                                 .sheet(isPresented: $viewModel.addingComment) {
                                     AddingCommentView()
                                         .environmentObject(viewModel)
+                                        .presentationDetents([.fraction(0.3)])
                                 }
                             }
-                            ForEach(post.comments) { comment in
-                                if let commenter = viewModel.commentUsers[comment.authorID] {
-                                    NCommentView(comment: comment, commenter: commenter)
-                                        .padding(.top)
-                                } else {
-                                    NLoadingScreen(title: "Loading...")
+                            .padding(.top)
+                            ForEach(post.comments.indices.reversed(), id: \.self) { index in
+                                HStack {
+                                    NCommentView(comment: post.comments[index])
+                                    if user == postUser {
+                                        if post.resolved {
+                                            Image(systemName: "checkmark.seal.fill")
+                                                .tint(Color(.appDarkBlue))
+                                        }
+                                        Button {
+                                            viewModel.solutionAchieved(by: post.comments[index].authorID)
+                                        } label: {
+                                            Image(systemName: "checkmark.seal")
+                                                .tint(Color(.appDarkBlue))
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -111,9 +121,6 @@ struct PostView: View {
         .onAppear {
             mainViewModel.fetchUser()
             viewModel.fetchUser()
-            for comment in post.comments {
-                viewModel.fetchCommenter(id: comment.authorID)
-            }
         }
     }
 }

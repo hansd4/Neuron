@@ -35,22 +35,19 @@ struct SentView: View {
                                         
                     ScrollView(.vertical) {
                         LazyVStack(alignment: .leading) {
-                            ForEach(viewModel.posts) { post in
-                                if user.posts.contains(post.id!) {
-                                    NavigationLink(destination: PostView(post: post).environmentObject(mainViewModel)) {
-                                        NPostView(post: post)
-                                    }
-                                    .tint(.primary)
+                            ForEach(viewModel.posts.reversed().filter {
+                                $0.authorID == user.id
+                            }) { post in
+                                NavigationLink(destination: PostView(post: post).environmentObject(mainViewModel)) {
+                                    NPostView(post: post)
                                 }
+                                .tint(.primary)
+                                .opacity(post.resolved ? 0.5 : 1)
                             }
                         }
                     }
                     .padding()
                     .padding(.top, 20)
-                    .onAppear {
-                        print(user.posts)
-                        print(viewModel.posts)
-                    }
                 } else {
                     NLoadingScreen(title: "Loading profile...")
                 }

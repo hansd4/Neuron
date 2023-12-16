@@ -12,5 +12,4 @@ struct Comment: Codable, Hashable, Identifiable {
     let authorID: String
     let postDate: Date
     let text: String
-    let replies: [Comment]
 }

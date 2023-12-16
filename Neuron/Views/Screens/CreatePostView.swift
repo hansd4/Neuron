@@ -58,7 +58,7 @@ struct CreatePostView: View {
                         }
                         
                         viewModel.post()
-                        mainViewModel.tabSelection = 0
+                        mainViewModel.tabSelection = 1
                     }
                 }
             } else {

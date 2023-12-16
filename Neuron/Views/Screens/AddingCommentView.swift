@@ -12,7 +12,7 @@ struct AddingCommentView: View {
     
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
+            Form {
                 TextEditor(text: $viewModel.commentField)
                     .font(Font.custom("Maven Pro", size: 16))
                 
@@ -22,6 +22,7 @@ struct AddingCommentView: View {
                 
                 Spacer()
             }
+            .padding()
         }
     }
 }

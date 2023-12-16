@@ -17,7 +17,7 @@ struct NProgressBar: View {
             x += 5 * (pow(1.0281, Double(lvl - 1)))
             lvl += 1
         }
-        return (lvl - 1)
+        return (lvl - 1) == 0 ? 1 : (lvl - 1)
     }
     var xpRemainder: Double {
         var lvl = 1

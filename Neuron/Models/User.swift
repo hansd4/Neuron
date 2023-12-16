@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Identifiable, Equatable {
     let id: String
     let name: String
     let email: String
     let pfp: String
     let OSIS: String
     let currentClasses: [String]
-    let tutorClasses: [String:[String:Double]]
+    var tutorClasses: [String:[String:Double]]
     var posts: [String]
     
     var currentClassesWithOther: [String] {

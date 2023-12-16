@@ -13,7 +13,7 @@ class ReceivedViewModel: ObservableObject {
     var postsByClass: [String: [Post]] {
         refreshPosts()
         var newDict: [String: [Post]] = [:]
-        for post in posts {
+        for post in posts.filter({ !$0.resolved }) {
             if newDict[post.course] != nil {
                 newDict[post.course]!.append(post)
             } else {

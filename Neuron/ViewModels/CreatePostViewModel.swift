@@ -77,7 +77,8 @@ import FirebaseAuth
                         title: title,
                         description: description,
                         picture: url,
-                        comments: comments)
+                        comments: comments,
+                        resolved: false)
         
         let db = Firestore.firestore()
         let collectionRef = db.collection("posts")

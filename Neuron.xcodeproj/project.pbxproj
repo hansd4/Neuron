@@ -26,6 +26,7 @@
 		BB0603E42B27048F0095C864 /* TutorClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0603E32B27048F0095C864 /* TutorClassesView.swift */; };
 		BB2EB5202B2CBA34004EBED8 /* NCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EB51F2B2CBA34004EBED8 /* NCommentView.swift */; };
 		BB2EB5222B2CC191004EBED8 /* AddingCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EB5212B2CC191004EBED8 /* AddingCommentView.swift */; };
+		BB2EB5242B2D20AD004EBED8 /* NCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2EB5232B2D20AD004EBED8 /* NCommentViewModel.swift */; };
 		BB49B3E92B27436800077999 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3E82B27436800077999 /* EmailView.swift */; };
 		BB49B3ED2B27E68400077999 /* NTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3EC2B27E68400077999 /* NTextField.swift */; };
 		BB49B3EF2B27F53A00077999 /* NSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB49B3EE2B27F53A00077999 /* NSecureField.swift */; };
@@ -81,6 +82,7 @@
 		BB0603E32B27048F0095C864 /* TutorClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorClassesView.swift; sourceTree = "<group>"; };
 		BB2EB51F2B2CBA34004EBED8 /* NCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCommentView.swift; sourceTree = "<group>"; };
 		BB2EB5212B2CC191004EBED8 /* AddingCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingCommentView.swift; sourceTree = "<group>"; };
+		BB2EB5232B2D20AD004EBED8 /* NCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCommentViewModel.swift; sourceTree = "<group>"; };
 		BB49B3E82B27436800077999 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		BB49B3EC2B27E68400077999 /* NTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTextField.swift; sourceTree = "<group>"; };
 		BB49B3EE2B27F53A00077999 /* NSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSecureField.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				BBFDC9472B2AB56A00E87352 /* CreatePostViewModel.swift */,
 				BBFDC94F2B2ACFC700E87352 /* ReceivedViewModel.swift */,
 				BB5454A52B2BE67500766B16 /* PostViewModel.swift */,
+				BB2EB5232B2D20AD004EBED8 /* NCommentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB5454A62B2BE67500766B16 /* PostViewModel.swift in Sources */,
+				BB2EB5242B2D20AD004EBED8 /* NCommentViewModel.swift in Sources */,
 				BB0603DE2B27045B0095C864 /* PersonalInfoView.swift in Sources */,
 				BB0603E02B27046A0095C864 /* ProfilePictureView.swift in Sources */,
 				BBFDC9382B2A1F1000E87352 /* Post.swift in Sources */,
